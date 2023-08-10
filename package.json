@@ -1,0 +1,12 @@
+{
+  "name": "metaforecast-scraper",
+  "author": "Marshall Polaris <marshall@pol.rs>",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "http-server -a localhost -o index.html -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

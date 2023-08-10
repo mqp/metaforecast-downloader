@@ -1,0 +1,6 @@
+/node_modules
+
+# ignore scraped data files
+*.json
+!package.json
+!package-lock.json
