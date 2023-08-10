@@ -3,7 +3,7 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Putin.json";
 const markets = [
-  { name: "GJ Open", q: "by Oct?", id: "goodjudgmentopen-2617" },
+  { name: "by Oct? (GJ Open)", q: "by Oct?", id: "goodjudgmentopen-2617" },
   { name: "Infer", id: "infer-1263" },
   { name: "Metaculus", id: "metaculus-13930" },
   { name: "Polymarket", id: "polymarket-0x9de1bbb5" },

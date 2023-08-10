@@ -3,10 +3,10 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Peace.json";
 const markets = [
-  { name: "Metaculus", id: "metaculus-13985" },
-  { name: "GJ Open", id: "goodjudgmentopen-2657" },
-  { name: "Manifold", id: "manifold-IY4cZAXStA3cvcqCDJqR" },
-  { name: "Insight", id: "insight-224920" }
+  { name: "Ceasefire? (Metaculus)", id: "metaculus-13985" },
+  { name: "War ends by Aug 19? (GJ Open)", id: "goodjudgmentopen-2657" },
+  { name: "War ends? (Manifold)", id: "manifold-IY4cZAXStA3cvcqCDJqR" },
+  { name: "War ends? (Insight)", id: "insight-224920" }
 ];
 
 function getPoint(id, historyItem) {
