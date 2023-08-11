@@ -24,6 +24,19 @@ export async function retry(task, n = 10) {
   }
 }
 
+// gets a human-readable site name from the metaforecast ID -- IDs look like "sitename-uniqueid"
+export function getMetaforecastSiteName(id) {
+  const [prefix, ...rest] = id.split('-');
+  switch (prefix) {
+  case 'metaculus': return 'Metaculus';
+  case 'manifold': return 'Manifold';
+  case 'goodjudgmentopen': return 'GJ Open';
+  case 'insight': return 'Insight';
+  case 'infer': return 'Infer';
+  case 'polymarket': return 'Polymarket';
+  }
+}
+ 
 // fetches a single blob of question data from the metaforecast API
 export async function fetchOne(id) {
   const res = await fetch('https://metaforecast.org/api/graphql', {
@@ -58,16 +71,17 @@ export async function fetchOne(id) {
 // normalizes the history into { x, y } chart points using the provided `getPoint` function
 export async function fetchAll(markets, getPoint) {
   let result = [];
-  for (const { id, name, q } of markets) {
-    log(`Querying data from ${name} (${id}).`)
+  for (const { id, name } of markets) {
+    log(`Querying data from ${id}.`)
     const { data } = await retry(() => fetchOne(id));
     if (data?.question?.history == null) {
       throw new Error(`No data returned from Metaforecast for ID ${id}.`);
     }
     const points = data.question.history.map(item => getPoint(id, item))
     const url = data.question.url;
-    log(`Successfully fetched ${points.length} points from ${name}.`)
-    result.push({ id, name, points, url });
+    const site = getMetaforecastSiteName(id);
+    log(`Successfully fetched ${points.length} points from ${id}.`)
+    result.push({ id, name, site, points, url });
   }
   return result;
 }

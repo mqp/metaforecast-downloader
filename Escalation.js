@@ -3,11 +3,11 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Escalation.json";
 const markets = [
-  { name: "Rus-NATO excl. US clash? (Metaculus)", id: "metaculus-8148" },
-  { name: "Rus-US clash? (Metaculus)", id: "metaculus-7449" },
-  { name: "China involvement? (Metaculus)", id: "metaculus-9969" },
-  { name: "Ukr joins EU? (Metaculus)", id: "metaculus-10081" },
-  { name: "Rus-US clash by Dec 16? (GJ Open)", id: "goodjudgmentopen-2913" },
+  { name: "Rus-NATO excl. US clash?", id: "metaculus-8148" },
+  { name: "Rus-US clash?", id: "metaculus-7449" },
+  { name: "China involvement?", id: "metaculus-9969" },
+  { name: "Ukr joins EU?", id: "metaculus-10081" },
+  { name: "Rus-US clash by Dec 16?", id: "goodjudgmentopen-2913" },
 ];
 
 function getPoint(id, historyItem) {
