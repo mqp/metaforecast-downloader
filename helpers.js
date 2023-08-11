@@ -8,12 +8,13 @@ export function sleep(ms) {
   return new Promise((resolve) => { setTimeout(resolve, ms) });
 }
 
-export async function retry(task, retries = 10) {
-  for (let i = 0; i < retries; i++) {
+// retries the task n times, returns the first success or throws on total failure
+export async function retry(task, n = 10) {
+  for (let i = 0; i < n; i++) {
     try {
       return await task();
     } catch (e) {
-      if (i === retries - 1) {
+      if (i === n - 1) {
         throw e;
       } else {
         log(e.toString())
@@ -23,6 +24,7 @@ export async function retry(task, retries = 10) {
   }
 }
 
+// fetches a single blob of question data from the metaforecast API
 export async function fetchOne(id) {
   const res = await fetch('https://metaforecast.org/api/graphql', {
     method: 'POST',
@@ -52,6 +54,8 @@ export async function fetchOne(id) {
   }
 }
 
+// fetches multiple blobs of data from the metaforecast API serially;
+// normalizes the history into { x, y } chart points using the provided `getPoint` function
 export async function fetchAll(markets, getPoint) {
   let result = [];
   for (const { id, name, q } of markets) {
