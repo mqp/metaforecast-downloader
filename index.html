@@ -47,6 +47,9 @@
        font-family: sans-serif;
        font-size: 0.75em;
      }
+     .legend>li a {
+       white-space: nowrap;
+     }
      .color-box {
        border: 1px solid #aaa;
        flex: 0 0 1em;
@@ -130,6 +133,16 @@
        return marketName ? `${marketName} (${siteName})` : siteName;
      }
 
+     function mostRecentPoint(dataset) {
+       let result;
+       for (const p of dataset.data) {
+         if (result == null || p.x > result.x) {
+           result = p;
+         }
+       }
+       return result;
+     }
+
      const colors = ['#1d6996','#edad08','#73af48','#94346e','#38a6a5','#e17c05'];
      const containers = document.querySelectorAll('article');
 
@@ -160,6 +173,9 @@
          const markets = await res.json();
          const datasets = markets.map((mkt, i) => ({
            label: formatLabel(mkt.name, mkt.site),
+           name: mkt.name, // name, site, url aren't chartjs things, we use them for legend formatting
+           site: mkt.site,
+           url: mkt.url,
            data: mkt.points,
            borderWidth: 2,
            borderColor: colors[i],
@@ -198,18 +214,30 @@
              },
              // draws the legend, see https://www.chartjs.org/docs/latest/samples/legend/html.html
              afterUpdate: (chart, args, options) => {
-               const entries = chart.options.plugins.legend.labels.generateLabels(chart);
-               const listItems = entries.map(entry => {
+               // order the datasets for display in the legend by their rightmost points
+               const sorted = datasets.toSorted((a, b) => mostRecentPoint(b).y - mostRecentPoint(a).y);
+               console.log(sorted);
+               const listItems = sorted.map(dataset => {
                  const li = document.createElement('li');
                  const box = document.createElement('span');
                  box.className = "color-box";
-                 box.style.background = entry.fillStyle;
-                 box.style.borderColor = entry.strokeStyle;
+                 box.style.background = dataset.backgroundColor;
+                 box.style.borderColor = dataset.borderColor;
                  box.style.borderWidth = '1px';
-                 const link = document.createElement('a');
-                 link.href = markets[entry.datasetIndex].url;
-                 link.append(entry.text);
-                 li.append(box, link);
+                 const text = document.createElement('span');
+                 text.style.color = dataset.backgroundColor;
+                 if (dataset.name) { // we will show "name (<a>site</a>)"
+                   const link = document.createElement('a');
+                   link.href = dataset.url;
+                   link.append(dataset.site);
+                   text.append(dataset.name, ' (', link, ')');
+                 } else { // we will show "<a>site</a>"
+                   const link = document.createElement('a');
+                   link.href = dataset.url;
+                   link.append(dataset.site);
+                   text.append(link);
+                 }
+                 li.append(box, text);
                  return li
                });
                legend.replaceChildren(...listItems)

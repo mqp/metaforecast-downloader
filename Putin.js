@@ -4,11 +4,11 @@ import { fetchAll, log } from './helpers.js';
 const outputPath = "Putin.json";
 const markets = [
   { name: "by Oct?", id: "goodjudgmentopen-2617" },
-  { name: "Infer", id: "infer-1263" },
-  { name: "Metaculus", id: "metaculus-13930" },
-  { name: "Polymarket", id: "polymarket-0x9de1bbb5" },
-  { name: "Manifold", id: "manifold-LZuynBJB6zTiKm0HZuDK" },
-  { name: "Insight", id: "insight-192967" }
+  { id: "infer-1263" },
+  { id: "metaculus-13930" },
+  { id: "polymarket-0x9de1bbb5" },
+  { id: "manifold-LZuynBJB6zTiKm0HZuDK" },
+  { id: "insight-192967" }
 ];
 
 function getPoint(id, historyItem) {

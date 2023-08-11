@@ -3,11 +3,11 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Threads2.json";
 const markets = [
-  { name: "GJ Open", id: "goodjudgmentopen-2631" },
-  { name: "Metaculus", id: "metaculus-14258" },
-  { name: "Metaculus 2", id: "metaculus-14257" },
-  { name: "Polymarket", id: "polymarket-0x950eb697" },
-  { name: "Manifold", id: "manifold-SttdxBP4Edxqzq0ScDCH" },
+  { id: "goodjudgmentopen-2631" },
+  { id: "metaculus-14258" },
+  { id: "metaculus-14257" },
+  { id: "polymarket-0x950eb697" },
+  { id: "manifold-SttdxBP4Edxqzq0ScDCH" },
 ];
 
 function getPoint(id, historyItem) {

@@ -3,10 +3,10 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Territory.json";
 const markets = [
-  { name: "Metaculus 1", id: "metaculus-10745" },
-  { name: "GJ Open", id: "goodjudgmentopen-2859" },
-  { name: "Metaculus 2", id: "metaculus-10738" },
-  { name: "Insight", id: "insight-146589" }
+  { id: "metaculus-10745" },
+  { id: "goodjudgmentopen-2859" },
+  { id: "metaculus-10738" },
+  { id: "insight-146589" }
 ];
 
 function getPoint(id, historyItem) {

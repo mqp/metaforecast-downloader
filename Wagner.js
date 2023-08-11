@@ -3,11 +3,11 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Wagner.json";
 const markets = [
-  { name: "GJ Open", id: "goodjudgmentopen-2908" },
-  { name: "Metaculus 1", id: "metaculus-10246" },
-  { name: "Metaculus 2", id: "metaculus-11589" },
-  { name: "Manifold 1", id: "manifold-qJTJAf9vafBmAbwnmiKI" },
-  { name: "Manifold 2", id: "manifold-onhTHDgQVDpX6V5inItM" },
+  { id: "goodjudgmentopen-2908" },
+  { id: "metaculus-10246" },
+  { id: "metaculus-11589" },
+  { id: "manifold-qJTJAf9vafBmAbwnmiKI" },
+  { id: "manifold-onhTHDgQVDpX6V5inItM" },
 ];
 
 function getPoint(id, historyItem) {
