@@ -1,6 +1,7 @@
 {
   "name": "metaforecast-scraper",
   "author": "Marshall Polaris <marshall@pol.rs>",
+  "license": "MIT",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
