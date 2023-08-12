@@ -81,7 +81,7 @@
         </article>
       </section>
       <section>
-        <article data-file="Peace.json" class="question">
+        <article data-file="Peace.json" data-from="2023-06-01" class="question">
           <div class="chart-container">
             <canvas class="chart"></canvas>
           </div>
@@ -148,15 +148,21 @@
 
      // interaction mode to get the most recent point to the left of the hover;
      // see https://www.chartjs.org/docs/latest/configuration/interactions.html
-     Chart.Interaction.modes.priorX = function(chart, e) {
+     Chart.Interaction.modes.priorX = function(chart, e, options, useFinalPosition) {
        const items = [];
        const metasets = chart.getSortedVisibleDatasetMetas();
        const position = Chart.helpers.getRelativePosition(e, chart);
-       const value = position.x;
+
+       // make sure we don't get points when you hover mouse off the left edge
+       const dataX = chart.scales.x.getValueForPixel(position.x);
+       if (dataX < chart.scales.x.min) {
+         return [];
+       }
+
        for (let i = 0, ilen = metasets.length; i < ilen; ++i) {
          const { index, data } = metasets[i];
          // binary search the location of the hovered x value in the dataset
-         const { lo, hi } = Chart.helpers._lookupByKey(data, 'x', value)
+         const { lo, hi } = Chart.helpers._lookupByKey(data, 'x', position.x)
          const prev = lo - 1;
          if (prev >= 0) {
            items.push({ datasetIndex: i, index: prev, element: data[prev] })
@@ -168,6 +174,7 @@
      for (const container of containers) {
        const canvas = container.querySelector(".chart");
        const legend = container.querySelector(".legend");
+       const startDate = container.dataset.from;
 
        fetch(container.dataset.file).then(async (res) => {
          const markets = await res.json();
@@ -193,7 +200,9 @@
                  const canvasPosition = Chart.helpers.getRelativePosition(event, chart);
                  const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
                  const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
-                 hoverState = { canvasPosition, data: { x: dataX, y: dataY } };
+                 if (dataX >= chart.scales.x.min) {
+                   hoverState = { canvasPosition, data: { x: dataX, y: dataY } };
+                 }
                }
              },
              // draws the vertical cursor on hover, via https://stackoverflow.com/a/68140000
@@ -216,7 +225,6 @@
              afterUpdate: (chart, args, options) => {
                // order the datasets for display in the legend by their rightmost points
                const sorted = datasets.toSorted((a, b) => mostRecentPoint(b).y - mostRecentPoint(a).y);
-               console.log(sorted);
                const listItems = sorted.map(dataset => {
                  const li = document.createElement('li');
                  const box = document.createElement('span');
@@ -261,7 +269,11 @@
              },
              elements: { point: { radius: 0 } },
              scales: {
-               x: { type: 'time', grid: { drawOnChartArea: false } },
+               x: {
+                 type: 'time',
+                 min: startDate ? startDate : undefined,
+                 grid: { drawOnChartArea: false }
+               },
                y: { ticks: { callback: formatPct } }
              }
            }
