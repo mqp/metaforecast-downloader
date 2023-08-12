@@ -3,11 +3,11 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Threads2.json";
 const markets = [
-  { id: "goodjudgmentopen-2631" },
-  { id: "metaculus-14258" },
-  { id: "metaculus-14257" },
-  { id: "polymarket-0x950eb697" },
-  { id: "manifold-SttdxBP4Edxqzq0ScDCH" },
+  { name: "Twtr bankruptcy by Dec 2?", id: "goodjudgmentopen-2631" },
+  { name: "Twtr income growth in 2023?", id: "metaculus-14258" },
+  { name: "Elon still owns Twtr?", id: "metaculus-14257" },
+  { name: "Twtr bankruptcy?", id: "polymarket-0x950eb697" },
+  { name: "Elon still owns Twtr?", id: "manifold-SttdxBP4Edxqzq0ScDCH" },
 ];
 
 function getPoint(id, historyItem) {

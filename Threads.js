@@ -3,10 +3,10 @@ import { fetchAll, log } from './helpers.js';
 
 const outputPath = "Threads.json";
 const markets = [
-  { id: "metaculus-14259" },
-  { id: "manifold-FxpNqBVG6NIvmZFVqG1P" },
-  { id: "manifold-JxcpJTGSurSdSMlFxYhL" },
-  { id: "manifold-qqFkvYHzzpTuonxnBWpN" },
+  { name: "Twtr user growth in 2023?", id: "metaculus-14259" },
+  { name: "Threads overtakes Twtr by 2024?", id: "manifold-FxpNqBVG6NIvmZFVqG1P" },
+  { name: "Threads overtakes Twtr by 2025?", id: "manifold-JxcpJTGSurSdSMlFxYhL" },
+  { name: "Twtr user growth in 2023?", id: "manifold-qqFkvYHzzpTuonxnBWpN" },
 ];
 
 function getPoint(id, historyItem) {
