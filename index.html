@@ -237,11 +237,13 @@
                  if (dataset.name) { // we will show "name (<a>site</a>)"
                    const link = document.createElement('a');
                    link.href = dataset.url;
+                   link.target = "_blank" // open in new tab
                    link.append(dataset.site);
                    text.append(dataset.name, ' (', link, ')');
                  } else { // we will show "<a>site</a>"
                    const link = document.createElement('a');
                    link.href = dataset.url;
+                   link.target = "_blank" // open in new tab
                    link.append(dataset.site);
                    text.append(link);
                  }
