@@ -1,7 +1,5 @@
-import fs from 'fs';
-import { fetchAll, log } from './helpers.js';
+import { fetchAll, writeJSONOutput } from './helpers.js';
 
-const outputPath = "Wagner.json";
 const markets = [
   { name: "Prigozhin quits or flees by Dec 9?", id: "goodjudgmentopen-2908" }, // Updated to take the inverse probability
   { name: "Coup?", id: "metaculus-10246" },
@@ -20,9 +18,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-
-
-fetchAll(markets, getPoint).then((data) => {
-  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
-  log(`Wrote data for ${markets.length} markets to ${outputPath}.`)
-})
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("Wagner.json", data));

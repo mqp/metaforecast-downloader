@@ -177,7 +177,7 @@
        const legend = container.querySelector(".legend");
        const startDate = container.dataset.from;
 
-       fetch(container.dataset.file).then(async (res) => {
+       fetch("data/" + container.dataset.file).then(async (res) => {
          const markets = await res.json();
          const datasets = markets.map((mkt, i) => ({
            label: formatLabel(mkt.name, mkt.site),

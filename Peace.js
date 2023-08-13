@@ -1,7 +1,5 @@
-import fs from 'fs';
-import { fetchAll, log } from './helpers.js';
+import { fetchAll, writeJSONOutput } from './helpers.js';
 
-const outputPath = "Peace.json";
 const markets = [
   { name: "Ceasefire?", id: "metaculus-13985" },
   { name: "Ceasefire?", id: "polymarket-0x30afc488" }, // New market
@@ -19,7 +17,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => {
-  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
-  log(`Wrote data for ${markets.length} markets to ${outputPath}.`)
-});
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("Peace.json", data));

@@ -1,7 +1,5 @@
-import fs from 'fs';
-import { fetchAll, log } from './helpers.js';
+import { fetchAll, writeJSONOutput } from './helpers.js';
 
-const outputPath = "Threads.json";
 const markets = [
   { name: "Twtr user growth in 2023?", id: "metaculus-14259" },
   { name: "Threads overtakes Twtr by 2024?", id: "manifold-FxpNqBVG6NIvmZFVqG1P" },
@@ -17,7 +15,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => {
-  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
-  log(`Wrote data for ${markets.length} markets to ${outputPath}.`)
-});
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("Threads.json", data));

@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 // helper functions used by individual question downloading scripts
 
 export function log(message) {
@@ -86,3 +89,10 @@ export async function fetchAll(markets, getPoint) {
   return result;
 }
 
+export function writeJSONOutput(filename, data) {
+  const outputDir = "data";
+  const outputPath = path.join(outputDir, filename);
+  fs.mkdirSync(outputDir, { recursive: true }); // recursive: true ignores if already exists
+  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+  log(`Wrote updated data to ${outputPath}.`)  
+}

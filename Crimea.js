@@ -1,7 +1,5 @@
-import fs from 'fs';
-import { fetchAll, log } from './helpers.js';
+import { fetchAll, writeJSONOutput } from './helpers.js';
 
-const outputPath = "Crimea.json";
 const markets = [
   { name: "Crimea land bridge cut?", id: "metaculus-13531" },
   { name: "Crimea any territory retaken by Dec 15?", id: "goodjudgmentopen-2967" }, // Updated to new forecast id - Marcel
@@ -19,7 +17,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => {
-  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
-  log(`Wrote data for ${markets.length} markets to ${outputPath}.`)
-});
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("Crimea.json", data));
