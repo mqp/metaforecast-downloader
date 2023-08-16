@@ -1,12 +1,12 @@
 /* this CSS is portable CSS for the charts and should be applied to the live site */
 
-.question {
+.chart-container {
   display: flex;
   flex-direction: row;
   gap: 1em;
 }
 
-.chart-container {
+.canvas-container {
   height: 400px;
   width: 500px;
   flex: 0 0 500px;

@@ -28,60 +28,60 @@
   <body>
     <main class="columns">
       <section>
-        <article data-file="Crimea.json" class="question">
-          <div class="chart-container">
+        <article data-file="Crimea.json" class="chart-container">
+          <div class="canvas-container">
             <canvas class="chart"></canvas>
           </div>
           <ul class="legend"></ul>
         </article>
-        <article data-file="Escalation.json" class="question">
-          <div class="chart-container">
+        <article data-file="Escalation.json" class="chart-container">
+          <div class="canvas-container">
             <canvas class="chart"></canvas>
           </div>
           <ul class="legend"></ul>
         </article>
-        <article data-file="Nuclear.json" class="question">
-          <div class="chart-container">
-            <canvas class="chart"></canvas>
-          </div>
-          <ul class="legend"></ul>
-        </article>
-      </section>
-      <section>
-        <article data-file="Peace.json" data-from="2023-06-01" class="question">
-          <div class="chart-container">
-            <canvas class="chart"></canvas>
-          </div>
-          <ul class="legend"></ul>
-        </article>
-        <article data-file="Putin.json" class="question">
-          <div class="chart-container">
-            <canvas class="chart"></canvas>
-          </div>
-          <ul class="legend"></ul>
-        </article>
-        <article data-file="Territory.json" class="question">
-          <div class="chart-container">
+        <article data-file="Nuclear.json" class="chart-container">
+          <div class="canvas-container">
             <canvas class="chart"></canvas>
           </div>
           <ul class="legend"></ul>
         </article>
       </section>
       <section>
-        <article data-file="Threads.json" class="question">
-          <div class="chart-container">
+        <article data-file="Peace.json" data-from="2023-06-01" class="chart-container">
+          <div class="canvas-container">
             <canvas class="chart"></canvas>
           </div>
           <ul class="legend"></ul>
         </article>
-        <article data-file="Threads2.json" class="question">
-          <div class="chart-container">
+        <article data-file="Putin.json" class="chart-container">
+          <div class="canvas-container">
             <canvas class="chart"></canvas>
           </div>
           <ul class="legend"></ul>
         </article>
-        <article data-file="Wagner.json" class="question">
-          <div class="chart-container">
+        <article data-file="Territory.json" class="chart-container">
+          <div class="canvas-container">
+            <canvas class="chart"></canvas>
+          </div>
+          <ul class="legend"></ul>
+        </article>
+      </section>
+      <section>
+        <article data-file="Threads.json" class="chart-container">
+          <div class="canvas-container">
+            <canvas class="chart"></canvas>
+          </div>
+          <ul class="legend"></ul>
+        </article>
+        <article data-file="Threads2.json" class="chart-container">
+          <div class="canvas-container">
+            <canvas class="chart"></canvas>
+          </div>
+          <ul class="legend"></ul>
+        </article>
+        <article data-file="Wagner.json" class="chart-container">
+          <div class="canvas-container">
             <canvas class="chart"></canvas>
           </div>
           <ul class="legend"></ul>
@@ -93,9 +93,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1"></script>
     <script src="charts.js"></script>
     <script>
+     const baseUrl = "data";
      Chart.Interaction.modes.priorX = priorXInteractionMode;
      for (const container of document.querySelectorAll('article')) {
-       fetchChartDatasets(`data/${container.dataset.file}`).then((datasets) => {
+       fetchChartDatasets(`${baseUrl}/${container.dataset.file}`).then((datasets) => {
          buildChart(container, datasets);
        })
      }
