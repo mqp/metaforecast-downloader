@@ -1,5 +1,5 @@
 @echo off
-cd C:\Users\marci\base_rate_times\metaforecast-downloader-master\js\src
+cd C:\Users\marci\metaforecast-downloader
 node Crimea.js
 node Escalation.js
 node Kerch.js
