@@ -831,6 +831,26 @@
       {
         "x": 1691809637428,
         "y": 0.9287
+      },
+      {
+        "x": 1691896048713,
+        "y": 0.9302
+      },
+      {
+        "x": 1691982430754,
+        "y": 0.9312
+      },
+      {
+        "x": 1692068852948,
+        "y": 0.9323
+      },
+      {
+        "x": 1692155272580,
+        "y": 0.9343
+      },
+      {
+        "x": 1692241633306,
+        "y": 0.9349
       }
     ],
     "url": "https://www.gjopen.com/questions/2617-will-vladimir-putin-cease-to-be-the-president-of-the-russian-federation-before-1-october-2023"
@@ -1102,6 +1122,14 @@
       {
         "x": 1691810001560,
         "y": 0.9144
+      },
+      {
+        "x": 1691896432878,
+        "y": 0.9157
+      },
+      {
+        "x": 1691982830384,
+        "y": 0.9169
       }
     ],
     "url": "https://www.infer-pub.com/questions/1263-will-vladimir-putin-cease-to-be-the-president-of-the-russian-federation-before-1-may-2024"
@@ -1745,6 +1773,10 @@
       {
         "x": 1691819395414,
         "y": 0.936
+      },
+      {
+        "x": 1691905903795,
+        "y": 0.94
       }
     ],
     "url": "https://www.metaculus.com/questions/13930/putin-presidency-on-jan-1-2024/"
@@ -1963,6 +1995,10 @@
       },
       {
         "x": 1691819502608,
+        "y": 0.915
+      },
+      {
+        "x": 1691906009856,
         "y": 0.915
       }
     ],
@@ -2759,6 +2795,10 @@
       {
         "x": 1691810102928,
         "y": 0.9287571935301973
+      },
+      {
+        "x": 1691896533115,
+        "y": 0.9310532660220737
       }
     ],
     "url": "https://manifold.markets/ACXBot/1-will-vladimir-putin-be-president"

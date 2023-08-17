@@ -639,6 +639,10 @@
       {
         "x": 1691819395414,
         "y": 0.15
+      },
+      {
+        "x": 1691905903795,
+        "y": 0.15
       }
     ],
     "url": "https://www.metaculus.com/questions/13531/ukraine-to-cut-land-bridge-to-crimea-by-2024/"
@@ -679,6 +683,26 @@
       {
         "x": 1691809637426,
         "y": 0.1304
+      },
+      {
+        "x": 1691896048712,
+        "y": 0.1317
+      },
+      {
+        "x": 1691982430753,
+        "y": 0.1317
+      },
+      {
+        "x": 1692068852948,
+        "y": 0.1404
+      },
+      {
+        "x": 1692155272579,
+        "y": 0.14
+      },
+      {
+        "x": 1692241633305,
+        "y": 0.14
       }
     ],
     "url": "https://www.gjopen.com/questions/2967-will-any-territory-in-crimea-that-was-russian-controlled-before-24-february-2022-cease-to-be-under-assessed-russian-control-before-15-december-2023-according-to-the-institute-for-the-study-of-war-isw"
@@ -1611,6 +1635,10 @@
       {
         "x": 1691810102933,
         "y": 0.0674417708274345
+      },
+      {
+        "x": 1691896533120,
+        "y": 0.04371239323818005
       }
     ],
     "url": "https://manifold.markets/Heaffey/will-ukraine-have-control-over-crim"
@@ -3578,6 +3606,10 @@
       },
       {
         "x": 1691819395412,
+        "y": 0.02
+      },
+      {
+        "x": 1691905903794,
         "y": 0.02
       }
     ],

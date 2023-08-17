@@ -1323,6 +1323,10 @@
       {
         "x": 1691819395412,
         "y": 0.1
+      },
+      {
+        "x": 1691905903794,
+        "y": 0.1
       }
     ],
     "url": "https://www.metaculus.com/questions/10154/radiation-incident-in-ukraine-by-2024/"
@@ -2054,6 +2058,10 @@
       },
       {
         "x": 1691819395414,
+        "y": 0.01
+      },
+      {
+        "x": 1691905903795,
         "y": 0.01
       }
     ],
@@ -3555,6 +3563,10 @@
       {
         "x": 1691819395407,
         "y": 0.050000000000000044
+      },
+      {
+        "x": 1691905903790,
+        "y": 0.050000000000000044
       }
     ],
     "url": "https://www.metaculus.com/questions/2797/no-non-test-nuclear-detonations-by-2024-01-01/"
@@ -4487,6 +4499,10 @@
       {
         "x": 1691810102933,
         "y": 0.025551381629020806
+      },
+      {
+        "x": 1691896533120,
+        "y": 0.025551381629020806
       }
     ],
     "url": "https://manifold.markets/AndyMartin/will-a-nuclear-weapon-be-launched-i-015e44ed91f5"
@@ -5295,6 +5311,26 @@
       {
         "x": 1691809637428,
         "y": 0.0537
+      },
+      {
+        "x": 1691896048713,
+        "y": 0.053
+      },
+      {
+        "x": 1691982430754,
+        "y": 0.0526
+      },
+      {
+        "x": 1692068852948,
+        "y": 0.0524
+      },
+      {
+        "x": 1692155272580,
+        "y": 0.0525
+      },
+      {
+        "x": 1692241633306,
+        "y": 0.0526
       }
     ],
     "url": "https://www.gjopen.com/questions/2634-before-1-october-2023-will-russia-detonate-a-nuclear-device-in-ukrainian-territory-territorial-waters-or-airspace"

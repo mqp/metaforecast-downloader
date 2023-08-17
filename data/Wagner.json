@@ -259,6 +259,26 @@
       {
         "x": 1691809637428,
         "y": 0.20999999999999996
+      },
+      {
+        "x": 1691896048713,
+        "y": 0.19999999999999996
+      },
+      {
+        "x": 1691982430753,
+        "y": 0.18999999999999995
+      },
+      {
+        "x": 1692068852948,
+        "y": 0.19999999999999996
+      },
+      {
+        "x": 1692155272579,
+        "y": 0.20999999999999996
+      },
+      {
+        "x": 1692241633305,
+        "y": 0.20999999999999996
       }
     ],
     "url": "https://www.gjopen.com/questions/2908-when-will-yevgeny-prigozhin-either-cease-to-be-the-leader-of-the-wagner-group-or-flee-russia-ukraine-and-belarus"
@@ -1587,6 +1607,10 @@
       {
         "x": 1691819395412,
         "y": 0.04
+      },
+      {
+        "x": 1691905903794,
+        "y": 0.04
       }
     ],
     "url": "https://www.metaculus.com/questions/10246/russian-coup-or-regime-change-by-2024/"
@@ -2719,6 +2743,10 @@
       {
         "x": 1691819395414,
         "y": 0.35
+      },
+      {
+        "x": 1691905903794,
+        "y": 0.35
       }
     ],
     "url": "https://www.metaculus.com/questions/11589/a-large-scale-conflict-within-russia-by-2030/"
@@ -3302,6 +3330,10 @@
       },
       {
         "x": 1691810102922,
+        "y": 0.1918143738184007
+      },
+      {
+        "x": 1691896533108,
         "y": 0.1918143738184007
       }
     ],
@@ -4235,6 +4267,10 @@
       {
         "x": 1691810102934,
         "y": 0.08945079793213596
+      },
+      {
+        "x": 1691896533122,
+        "y": 0.08739347100847192
       }
     ],
     "url": "https://manifold.markets/MetaculusBot/will-a-coup-or-regime-change-take-p"
