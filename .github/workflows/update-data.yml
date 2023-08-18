@@ -1,0 +1,22 @@
+name: Scrape updated data and commit
+
+# uncomment this to run at midnight every day
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"
+
+jobs:
+  scheduled-job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - run: npm ci
+      - run: ./scrape-all.sh
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update chart data
