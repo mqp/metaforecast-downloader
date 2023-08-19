@@ -2,8 +2,8 @@ name: Scrape updated data and commit
 
 on:
   workflow_dispatch:
-# schedule: # uncomment this to run at midnight UTC every day https://crontab.guru/#0_0_*_*_*
-#   - cron: "0 0 * * *"
+  schedule:
+    - cron: "0 0/6 * * *"
 
 jobs:
   rescrape:
