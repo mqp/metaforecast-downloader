@@ -1,5 +1,3 @@
-/* frontend JS for the charts on the live site */
-
 const CHART_COLORS = ['#1d6996','#edad08','#73af48','#94346e','#38a6a5','#e17c05'];
 
 function formatPct(p) {
@@ -20,8 +18,6 @@ function mostRecentPoint(dataset) {
   return result;
 }
 
-// Interaction mode to get the most recent point to the left of the hover;
-// see https://www.chartjs.org/docs/latest/configuration/interactions.html
 function priorXInteractionMode(chart, e, options, useFinalPosition) {
   const items = [];
   const metasets = chart.getSortedVisibleDatasetMetas();
@@ -43,7 +39,7 @@ function priorXInteractionMode(chart, e, options, useFinalPosition) {
     }
   }
   return items;
-};
+}
 
 function extractLatestData(markets) {
   return markets.map(market => {
@@ -80,7 +76,10 @@ function extractMonthlyData(markets) {
       }
 
       if (closestPoint) {
-        monthlyData[`${targetDate.getMonth() + 1}-1`] = parseFloat((closestPoint.y * 100).toFixed(2));
+        monthlyData[`${targetDate.getMonth() + 1}-1`] = {
+          probability: parseFloat((closestPoint.y * 100).toFixed(2)),
+          timestamp: new Date(closestPoint.x).toISOString(),
+        };
       }
     }
 
@@ -99,7 +98,7 @@ function calculateMedians(latestData, monthlyData) {
 
   const allMonthlyKeys = [...new Set(monthlyData.flatMap(data => Object.keys(data.monthlyData)))];
   for (const key of allMonthlyKeys) {
-    const monthlyProbabilities = monthlyData.map(data => data.monthlyData[key]).filter(Boolean);
+    const monthlyProbabilities = monthlyData.map(data => data.monthlyData[key]?.probability).filter(Boolean);
     medians[key] = median(monthlyProbabilities);
   }
 
@@ -116,10 +115,41 @@ function createHeadline(medians) {
   const latestMedian = medians.latest;
   const latestMonthKey = Object.keys(medians).filter(key => key !== "latest").pop();
   const latestMonthDate = new Date(new Date().getFullYear(), parseInt(latestMonthKey.split('-')[0]) - 1);
-  const monthName = latestMonthDate.toLocaleString('default', { month: 'long' });
   const startOfMonthMedian = medians[latestMonthKey];
   const percentagePointChange = (latestMedian - startOfMonthMedian).toFixed(2);
-  return `${latestMedian}%, ${percentagePointChange} points this month from ${startOfMonthMedian}% (start of ${monthName})`;
+  return `${latestMedian}%, ${percentagePointChange} points this month from ${startOfMonthMedian}% (start of ${latestMonthDate.toLocaleString('default', { month: 'long' })})`;
+}
+
+function createTable(latestData, monthlyData) {
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+
+  // Create headers
+  const headerRow = document.createElement('tr');
+  headerRow.innerHTML = '<th>ID</th><th>Latest Probability</th><th>Latest Timestamp</th>';
+  for (let i = new Date().getMonth(); i >= 0; i--) {
+    const monthName = new Date(new Date().getFullYear(), i).toLocaleString('default', { month: 'long' });
+    headerRow.innerHTML += `<th>${monthName} 1 Probability</th><th>${monthName} 1 Timestamp</th>`;
+  }
+  thead.appendChild(headerRow);
+
+  // Create rows for each market
+  latestData.forEach((data, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${data.id}</td><td>${data.latestProbability}%</td><td>${data.latestTimestamp.toISOString()}</td>`;
+    for (let i = new Date().getMonth(); i >= 0; i--) {
+      const key = `${i + 1}-1`;
+      const monthlyProbability = monthlyData[index].monthlyData[key]?.probability || '-';
+      const monthlyTimestamp = monthlyData[index].monthlyData[key]?.timestamp || '-';
+      row.innerHTML += `<td>${monthlyProbability}%</td><td>${monthlyTimestamp}</td>`;
+    }
+    tbody.appendChild(row);
+  });
+
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  return table;
 }
 
 async function fetchChartDatasets(jsonUrl) {
@@ -153,37 +183,6 @@ async function fetchChartDatasets(jsonUrl) {
     medians,
     headline,
   };
-}
-
-function createTable(latestData, monthlyData) {
-  const table = document.createElement('table');
-  const thead = document.createElement('thead');
-  const tbody = document.createElement('tbody');
-
-  // Create headers
-  const headerRow = document.createElement('tr');
-  headerRow.innerHTML = '<th>ID</th><th>Latest</th>';
-  for (let i = new Date().getMonth(); i >= 0; i--) {
-    const monthName = new Date(new Date().getFullYear(), i).toLocaleString('default', { month: 'long' });
-    headerRow.innerHTML += `<th>${monthName} 1</th>`;
-  }
-  thead.appendChild(headerRow);
-
-  // Create rows for each market
-  latestData.forEach((data, index) => {
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${data.id}</td><td>${data.latestProbability}%</td>`;
-    for (let i = new Date().getMonth(); i >= 0; i--) {
-      const key = `${i + 1}-1`;
-      const monthlyProbability = monthlyData[index].monthlyData[key] || '-';
-      row.innerHTML += `<td>${monthlyProbability}%</td>`;
-    }
-    tbody.appendChild(row);
-  });
-
-  table.appendChild(thead);
-  table.appendChild(tbody);
-  return table;
 }
 
 function buildChart(container, { datasets, latestData, monthlyData, medians, headline }) {
