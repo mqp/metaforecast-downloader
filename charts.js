@@ -146,15 +146,15 @@ function buildChart(container, datasets) {
           }
         }
       },
-      elements: { point: { radius: 0 } },
-      scales: {
-        x: {
-          type: 'time',
-          min: startDate ?? "2023-01-01",
-          grid: { drawOnChartArea: false }
-        },
-        y: { ticks: { callback: formatPct } }
-      }
+//      elements: { point: { radius: 0 } },
+//      scales: {
+//        x: {
+//          type: 'time',
+//          min: startDate ?? "2023-01-01",
+//          grid: { drawOnChartArea: false }
+//        },
+//        y: { ticks: { callback: formatPct } }
+//      }
     }
   });
 }
