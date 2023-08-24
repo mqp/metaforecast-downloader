@@ -150,7 +150,7 @@ function buildChart(container, datasets) {
       scales: {
         x: {
           type: 'time',
-          min: startDate ? startDate : undefined,
+          min: startDate ?? "2023-01-01",
           grid: { drawOnChartArea: false }
         },
         y: { ticks: { callback: formatPct } }
