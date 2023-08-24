@@ -188,11 +188,13 @@ function createTable(latestData, monthlyData) {
 
 function buildChart(container, { datasets, latestData, monthlyData, medians, headline }) {
   // Display headline
+  console.log("Creating headline:", headline);
   const headlineElement = document.createElement('h3');
   headlineElement.textContent = headline;
   container.insertBefore(headlineElement, container.firstChild);
 
   // Create and display the table
+  console.log("Creating table with latestData:", latestData, "monthlyData:", monthlyData); // Debug log
   const tableElement = createTable(latestData, monthlyData);
   container.insertBefore(tableElement, container.firstChild);
 
