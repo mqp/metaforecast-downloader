@@ -8,8 +8,32 @@
 
 .canvas-container {
   height: 400px;
-  width: 500px;
-  flex: 0 0 500px;
+  width: 420px;
+  flex: 0 0 auto;
+}
+
+/* Tablet (991px and down) Webflow breakpoint */
+@media (max-width: 991px) {
+  .canvas-container {
+    width: 220px;
+    flex: 0 0 auto;
+  }
+}
+
+/* Mobile Landscape (767px and down) Webflow breakpoint */
+  @media (max-width: 767px) {
+  .canvas-container {
+    width: 220px;
+    flex: 0 0 auto;
+  }
+}
+
+/* Mobile Portrait (478px and down) Webflow breakpoint */
+@media (max-width: 478px) {
+  .canvas-container {
+    width: 220px;
+    flex: 0 0 auto;
+  }
 }
 
 .chart {
@@ -27,13 +51,16 @@
 .legend>li {
   display: flex;
   gap: 0.5em;
-  font-family: sans-serif;
+  font-family: 'Georgia', sans-serif;
   font-size: 0.75em;
+  font-weight: bold;
   margin-bottom: 0.5em;
 }
 
 .legend>li a {
   white-space: nowrap;
+  font-size: 0.95em;
+  font-weight: normal;
 }
 
 .color-box {
