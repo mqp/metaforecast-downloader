@@ -186,15 +186,19 @@ async function fetchChartDatasets(jsonUrl) {
 }
 
 function buildChart(container, { datasets, latestData, monthlyData, medians, headline }) {
+  console.log("Container element:", container);
+
   // Display headline
   console.log("Creating headline:", headline);
   const headlineElement = document.createElement('h3');
   headlineElement.textContent = headline;
+  console.log("Headline element:", headlineElement);
   container.insertBefore(headlineElement, container.firstChild);
 
   // Create and display the table
   console.log("Creating table with latestData:", latestData, "monthlyData:", monthlyData); // Debug log
   const tableElement = createTable(latestData, monthlyData);
+  console.log("Table element:", tableElement);
   container.insertBefore(tableElement, container.firstChild);
 
   const canvas = container.querySelector(".chart");
