@@ -1,3 +1,5 @@
+/* frontend JS for the charts on the live site */
+
 const CHART_COLORS = ['#1d6996','#edad08','#73af48','#94346e','#38a6a5','#e17c05'];
 
 function formatPct(p) {
@@ -18,12 +20,14 @@ function mostRecentPoint(dataset) {
   return result;
 }
 
+// interaction mode to get the most recent point to the left of the hover;
+// see https://www.chartjs.org/docs/latest/configuration/interactions.html
 function priorXInteractionMode(chart, e, options, useFinalPosition) {
   const items = [];
   const metasets = chart.getSortedVisibleDatasetMetas();
   const position = Chart.helpers.getRelativePosition(e, chart);
 
-  // Make sure we don't get points when you hover mouse off the left edge
+  // make sure we don't get points when you hover mouse off the left edge
   const dataX = chart.scales.x.getValueForPixel(position.x);
   if (dataX < chart.scales.x.min) {
     return [];
@@ -31,7 +35,7 @@ function priorXInteractionMode(chart, e, options, useFinalPosition) {
 
   for (let i = 0, ilen = metasets.length; i < ilen; ++i) {
     const { index, data } = metasets[i];
-    // Binary search the location of the hovered x value in the dataset
+    // binary search the location of the hovered x value in the dataset
     const { lo, hi } = Chart.helpers._lookupByKey(data, 'x', position.x)
     const prev = lo - 1;
     if (prev >= 0) {
@@ -39,168 +43,25 @@ function priorXInteractionMode(chart, e, options, useFinalPosition) {
     }
   }
   return items;
-}
-
-function extractLatestData(markets) {
-  return markets.map(market => {
-    const lastPoint = market.points[market.points.length - 1];
-    return {
-      id: market.id,
-      name: market.name,
-      site: market.site,
-      latestTimestamp: new Date(lastPoint.x),
-      latestProbability: parseFloat((lastPoint.y * 100).toFixed(2)),
-    };
-  });
-}
-
-function extractMonthlyData(markets) {
-  return markets.map(market => {
-    const monthlyData = {};
-    const sortedPoints = market.points.slice().sort((a, b) => a.x - b.x);
-    const latestDate = new Date(sortedPoints[sortedPoints.length - 1].x);
-
-    for (let month = latestDate.getMonth(); month >= 0; month--) {
-      const targetDate = new Date(latestDate.getFullYear(), month, 1);
-      let closestPoint = null;
-      let closestDistance = Number.MAX_VALUE;
-
-      for (const point of sortedPoints) {
-        const pointDate = new Date(point.x);
-        const distance = Math.abs(targetDate - pointDate);
-
-        if (distance <= 2 * 24 * 60 * 60 * 1000 && distance < closestDistance) {
-          closestPoint = point;
-          closestDistance = distance;
-        }
-      }
-
-      if (closestPoint) {
-        monthlyData[`${targetDate.getMonth() + 1}-1`] = {
-          probability: parseFloat((closestPoint.y * 100).toFixed(2)),
-          timestamp: new Date(closestPoint.x).toISOString(),
-        };
-      }
-    }
-
-    return {
-      id: market.id,
-      monthlyData,
-    };
-  });
-}
-
-function calculateMedians(latestData, monthlyData) {
-  const latestProbabilities = latestData.map(data => data.latestProbability);
-  const medians = {
-    latest: median(latestProbabilities),
-  };
-
-  const allMonthlyKeys = [...new Set(monthlyData.flatMap(data => Object.keys(data.monthlyData)))];
-  for (const key of allMonthlyKeys) {
-    const monthlyProbabilities = monthlyData.map(data => data.monthlyData[key]?.probability).filter(Boolean);
-    medians[key] = median(monthlyProbabilities);
-  }
-
-  return medians;
-}
-
-function median(values) {
-  const sorted = values.slice().sort((a, b) => a - b);
-  const mid = Math.floor(sorted.length / 2);
-  return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
-}
-
-function createHeadline(medians) {
-  const latestMedian = medians.latest;
-  const latestMonthKey = Object.keys(medians).filter(key => key !== "latest").pop();
-  const latestMonthDate = new Date(new Date().getFullYear(), parseInt(latestMonthKey.split('-')[0]) - 1);
-  const startOfMonthMedian = medians[latestMonthKey];
-  const percentagePointChange = (latestMedian - startOfMonthMedian).toFixed(2);
-  return `${latestMedian}%, ${percentagePointChange} points this month from ${startOfMonthMedian}% (start of ${latestMonthDate.toLocaleString('default', { month: 'long' })})`;
-}
-
-function createTable(latestData, monthlyData) {
-  const table = document.createElement('table');
-  const thead = document.createElement('thead');
-  const tbody = document.createElement('tbody');
-
-  // Create headers
-  const headerRow = document.createElement('tr');
-  headerRow.innerHTML = '<th>ID</th><th>Latest Probability</th><th>Latest Timestamp</th>';
-  for (let i = new Date().getMonth(); i >= 0; i--) {
-    const monthName = new Date(new Date().getFullYear(), i).toLocaleString('default', { month: 'long' });
-    headerRow.innerHTML += `<th>${monthName} 1 Probability</th><th>${monthName} 1 Timestamp</th>`;
-  }
-  thead.appendChild(headerRow);
-
-  // Create rows for each market
-  latestData.forEach((data, index) => {
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${data.id}</td><td>${data.latestProbability}%</td><td>${data.latestTimestamp.toISOString()}</td>`;
-    for (let i = new Date().getMonth(); i >= 0; i--) {
-      const key = `${i + 1}-1`;
-      const monthlyProbability = monthlyData[index].monthlyData[key]?.probability || '-';
-      const monthlyTimestamp = monthlyData[index].monthlyData[key]?.timestamp || '-';
-      row.innerHTML += `<td>${monthlyProbability}%</td><td>${monthlyTimestamp}</td>`;
-    }
-    tbody.appendChild(row);
-  });
-
-  table.appendChild(thead);
-  table.appendChild(tbody);
-  return table;
-}
+};
 
 async function fetchChartDatasets(jsonUrl) {
   const res = await fetch(jsonUrl);
   const markets = await res.json();
-
-  // Extract latest data and monthly data
-  const latestData = extractLatestData(markets);
-  const monthlyData = extractMonthlyData(markets);
-
-  // Calculate medians
-  const medians = calculateMedians(latestData, monthlyData);
-
-  // Create headline
-  const headline = createHeadline(medians);
-
-  // Return datasets along with the additional data
-  return {
-    datasets: markets.map((mkt, i) => ({
-      label: formatLabel(mkt.name, mkt.site),
-      name: mkt.name,
-      site: mkt.site,
-      url: mkt.url,
-      data: mkt.points,
-      borderWidth: 2,
-      borderColor: CHART_COLORS[i],
-      backgroundColor: CHART_COLORS[i]
-    })),
-    latestData,
-    monthlyData,
-    medians,
-    headline,
-  };
+  return markets.map((mkt, i) => ({
+    label: formatLabel(mkt.name, mkt.site),
+    // name, site, url aren't native chartjs things, we use them for legend formatting
+    name: mkt.name, 
+    site: mkt.site,
+    url: mkt.url,
+    data: mkt.points,
+    borderWidth: 2,
+    borderColor: CHART_COLORS[i],
+    backgroundColor: CHART_COLORS[i]
+  }))
 }
 
-function buildChart(container, { datasets, latestData, monthlyData, medians, headline }) {
-  console.log("Container element:", container);
-
-  // Display headline
-  console.log("Creating headline:", headline);
-  const headlineElement = document.createElement('h3');
-  headlineElement.textContent = headline;
-  console.log("Headline element:", headlineElement);
-  container.insertBefore(headlineElement, container.firstChild);
-
-  // Create and display the table
-  console.log("Creating table with latestData:", latestData, "monthlyData:", monthlyData); // Debug log
-  const tableElement = createTable(latestData, monthlyData);
-  console.log("Table element:", tableElement);
-  container.insertBefore(tableElement, container.firstChild);
-
+function buildChart(container, datasets) {
   const canvas = container.querySelector(".chart");
   const legend = container.querySelector(".legend");
   const startDate = container.dataset.from;
@@ -209,7 +70,7 @@ function buildChart(container, { datasets, latestData, monthlyData, medians, hea
     type: 'line',
     data: { datasets },
     plugins: [{
-      // Tracks the hover state for the tooltip and vertical cursor
+      // tracks the hover state for the tooltip and vertical cursor
       beforeEvent: (chart, args) => {
         const event = args.event;
         if (event.type === 'mousemove') {
@@ -221,7 +82,7 @@ function buildChart(container, { datasets, latestData, monthlyData, medians, hea
           }
         }
       },
-      // Draws the vertical cursor on hover, via https://stackoverflow.com/a/68140000
+      // draws the vertical cursor on hover, via https://stackoverflow.com/a/68140000
       afterDraw: (chart) => {
         if (chart.tooltip?._active?.length && hoverState) {
           const x = hoverState.canvasPosition.x;
@@ -237,9 +98,9 @@ function buildChart(container, { datasets, latestData, monthlyData, medians, hea
           ctx.restore();
         }
       },
-      // Draws the legend, see https://www.chartjs.org/docs/latest/samples/legend/html.html
+      // draws the legend, see https://www.chartjs.org/docs/latest/samples/legend/html.html
       afterUpdate: (chart, args, options) => {
-        // Order the datasets for display in the legend by their rightmost points
+        // order the datasets for display in the legend by their rightmost points
         const sorted = datasets.toSorted((a, b) => mostRecentPoint(b).y - mostRecentPoint(a).y);
         const listItems = sorted.map(dataset => {
           const li = document.createElement('li');
@@ -250,37 +111,37 @@ function buildChart(container, { datasets, latestData, monthlyData, medians, hea
           box.style.borderWidth = '1px';
           const text = document.createElement('span');
           text.style.color = dataset.backgroundColor;
-          if (dataset.name) { // We will show "name (<a>site</a>)"
+          if (dataset.name) { // we will show "name (<a>site</a>)"
             const link = document.createElement('a');
             link.href = dataset.url;
-            link.target = "_blank" // Open in new tab
+            link.target = "_blank" // open in new tab
             link.append(dataset.site);
             text.append(dataset.name, ' (', link, ')');
-          } else { // We will show "<a>site</a>"
+          } else { // we will show "<a>site</a>"
             const link = document.createElement('a');
             link.href = dataset.url;
-            link.target = "_blank" // Open in new tab
+            link.target = "_blank" // open in new tab
             link.append(dataset.site);
             text.append(link);
           }
           li.append(box, text);
-          return li;
+          return li
         });
-        legend.replaceChildren(...listItems);
+        legend.replaceChildren(...listItems)
       }
     }],
     options: {
       maintainAspectRatio: false,
       interaction: { mode: 'priorX', intersect: false },
       plugins: {
-        legend: { display: false }, // Our custom legend plugin drawing will do it
+        legend: { display: false }, // our custom legend plugin drawing will do it
         tooltip: {
           itemSort: (a, b) => b.parsed.y - a.parsed.y,
           callbacks: {
             title: (items) => new Date(hoverState.data.x).toDateString(),
             label: (item) => {
               const { dataset } = item;
-              return `${dataset.label}: ${formatPct(item.parsed.y)}`;
+              return `${dataset.label}: ${formatPct(item.parsed.y)}`
             }
           }
         }
