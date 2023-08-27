@@ -643,6 +643,10 @@
       {
         "x": 1691905903795,
         "y": 0.15
+      },
+      {
+        "x": 1693115226752,
+        "y": 0.08
       }
     ],
     "url": "https://www.metaculus.com/questions/13531/ukraine-to-cut-land-bridge-to-crimea-by-2024/"
@@ -731,6 +735,18 @@
       {
         "x": 1692846485722,
         "y": 0.145
+      },
+      {
+        "x": 1692932846267,
+        "y": 0.117
+      },
+      {
+        "x": 1693019260611,
+        "y": 0.1171
+      },
+      {
+        "x": 1693105658097,
+        "y": 0.1157
       }
     ],
     "url": "https://www.gjopen.com/questions/2967-will-any-territory-in-crimea-that-was-russian-controlled-before-24-february-2022-cease-to-be-under-assessed-russian-control-before-15-december-2023-according-to-the-institute-for-the-study-of-war-isw"
@@ -1667,9 +1683,25 @@
       {
         "x": 1691896533120,
         "y": 0.04371239323818005
+      },
+      {
+        "x": 1693105726280,
+        "y": 0.05755087077120042
       }
     ],
     "url": "https://manifold.markets/Heaffey/will-ukraine-have-control-over-crim"
+  },
+  {
+    "id": "polymarket-0xda2cef9f",
+    "name": "Crimea land bridge cut by Nov?",
+    "site": "Polymarket",
+    "points": [
+      {
+        "x": 1693115339655,
+        "y": 0.065
+      }
+    ],
+    "url": "https://polymarket.com/market/will-ukraine-sever-the-land-bridge-between-crimea-and-russia-before-nov-1"
   },
   {
     "id": "insight-154445",
@@ -3639,6 +3671,10 @@
       {
         "x": 1691905903794,
         "y": 0.02
+      },
+      {
+        "x": 1693115226751,
+        "y": 0.01
       }
     ],
     "url": "https://www.metaculus.com/questions/10737/ukraine-controls-sevastapol-on-jan-1-2024/"
