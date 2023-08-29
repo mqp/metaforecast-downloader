@@ -44,20 +44,3 @@ function priorXInteractionMode(chart, e, options, useFinalPosition) {
   }
   return items;
 };
-
-async function fetchChartDatasets(jsonUrl) {
-  const res = await fetch(jsonUrl);
-  const markets = await res.json();
-  return markets.map((mkt, i) => ({
-    label: formatLabel(mkt.name, mkt.site),
-    // name, site, url aren't native chartjs things, we use them for legend formatting
-    name: mkt.name, 
-    site: mkt.site,
-    url: mkt.url,
-    data: mkt.points,
-    id: mkt.id,
-    borderWidth: 2,
-    borderColor: CHART_COLORS[i],
-    backgroundColor: CHART_COLORS[i]
-  }))
-}
