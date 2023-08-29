@@ -55,6 +55,7 @@ async function fetchChartDatasets(jsonUrl) {
     site: mkt.site,
     url: mkt.url,
     data: mkt.points,
+    id: mkt.id,
     borderWidth: 2,
     borderColor: CHART_COLORS[i],
     backgroundColor: CHART_COLORS[i]
