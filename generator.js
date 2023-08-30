@@ -133,6 +133,30 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         headlineText = `Crimea land bridge: ${novProb}% chance of being cut by Nov, ${yearProb}% by 2024`;
         break;
      
+      //Escalation
+      case 'Escalation.json':
+        const escalationId = 'metaculus-8148';
+        const latestProbabilityEscalation = dataMap[escalationId]?.latestProbability || 0;
+        const lastDayProbabilityEscalation = dataMap[escalationId]?.lastDayProbability || 0;
+        const percentagePointDifferenceEscalation = Math.round((latestProbabilityEscalation - lastDayProbabilityEscalation) * 100);
+        const latestPercentEscalation = Math.round(latestProbabilityEscalation * 100);
+        headlineText = `Escalation: ${latestPercentEscalation}% risk of Russian clash with NATO excluding US`;
+        if (Math.abs(percentagePointDifferenceEscalation) >= 1) {
+          const direction = (percentagePointDifferenceEscalation > 0) ? 'up' : 'down';
+          headlineText += `, ${direction} ${percentagePointDifferenceEscalation >= 0 ? '+' : ''}${percentagePointDifferenceEscalation} points this month`;
+        }
+
+        //Escalation sub-headline
+        const subHeadlineElement = document.createElement('h5');
+        const idsForSubEscalation = ['metaculus-7449', 'goodjudgmentopen'];
+        const latestProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+        const medianLatestSubEscalation = calculateMedian(latestProbabilitiesSubEscalation);
+        const medianLatestPercentSubEscalation = Math.round(medianLatestSubEscalation * 100);
+        let subHeadlineText = `Risk of Russian clash with NATO including US ~${medianLatestPercentSubEscalation}%`;
+        subHeadlineElement.textContent = subHeadlineText;
+        headlineElement.appendChild(subHeadlineElement);
+        break;
+
      //Kerch
       case 'Kerch.json':
         const idsForKerch = ['metaculus-13989', 'manifold-7GJmdx2kAsqTiusZWppI'];
@@ -148,7 +172,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
           headlineText += `, ${direction} ${percentagePointDifferenceKerch >= 0 ? '+' : ''}${percentagePointDifferenceKerch} points this month`;
         }
 
-        //Kerch sub-header
+      //Kerch sub-header
         const subHeadlineElement = document.createElement('h5');
         const kerchSubId = 'metaculus-12569';
         const latestProbabilityKerchSub = dataMap[kerchSubId]?.latestProbability || 0;
@@ -162,8 +186,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         }
         subHeadlineElement.textContent = subHeadlineText;
         headlineElement.appendChild(subHeadlineElement);
-
-        break;
+      break;
       
       //Putin
       case 'Putin.json':
