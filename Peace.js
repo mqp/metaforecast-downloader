@@ -2,7 +2,7 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
   { name: "Ceasefire?", id: "metaculus-13985" },
-  { name: "Ceasefire?", id: "polymarket-0x30afc488" },
+//  { name: "Ceasefire?", id: "polymarket-0x30afc488" },
   { name: "War ends?", id: "goodjudgmentopen-2951" },
   { name: "War ends?", id: "manifold-IY4cZAXStA3cvcqCDJqR" },
   { name: "War ends?", id: "insight-224920" }
