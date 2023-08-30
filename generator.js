@@ -172,8 +172,13 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
           const direction = (percentagePointDifferencePoints > 0) ? 'up' : 'down';
           headlineText += `, ${direction} ${percentagePointDifferencePoints >= 0 ? '+' : ''}${percentagePointDifferencePoints} points this month`;
         }
-        break;
       
+       //Putin sub-header
+       const h5Putin = document.createElement('h5');
+       h5Putin.textContent = 'Recovered to pre-Wagner mutiny level (~92%)';
+       headlineElement.appendChild(h5Putin);
+      break;   
+
       //Default
       default:
         headlineText = `Latest ${medianLatestPercent}%`;
