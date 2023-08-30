@@ -142,11 +142,27 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         const medianLastDayKerch = calculateMedian(lastDayProbabilitiesKerch);
         const percentagePointDifferenceKerch = Math.round((medianLatestKerch - medianLastDayKerch) * 100);
         const medianLatestPercentKerch = Math.round(medianLatestKerch * 100);
-        headlineText = `Kerch: ~${medianLatestPercentKerch}% chance of being cut`;
+        headlineText = `Kerch bridge: ~${medianLatestPercentKerch}% chance of being cut`;
         if (Math.abs(percentagePointDifferenceKerch) >= 1) {
           const direction = (percentagePointDifferenceKerch > 0) ? 'up' : 'down';
           headlineText += `, ${direction} ${percentagePointDifferenceKerch >= 0 ? '+' : ''}${percentagePointDifferenceKerch} points this month`;
         }
+
+        //Kerch sub-header
+        const subHeadlineElement = document.createElement('h5');
+        const kerchSubId = 'metaculus-12569';
+        const latestProbabilityKerchSub = dataMap[kerchSubId]?.latestProbability || 0;
+        const lastDayProbabilityKerchSub = dataMap[kerchSubId]?.lastDayProbability || 0;
+        const percentagePointDifferenceKerchSub = Math.round((latestProbabilityKerchSub - lastDayProbabilityKerchSub) * 100);
+        const latestPercentKerchSub = Math.round(latestProbabilityKerchSub * 100);
+        let subHeadlineText = `${latestPercentKerchSub}% chance of being made impassible for 7 days`;
+        if (Math.abs(percentagePointDifferenceKerchSub) >= 1) {
+          const directionSub = (percentagePointDifferenceKerchSub > 0) ? 'up' : 'down';
+          subHeadlineText += `, ${directionSub} ${percentagePointDifferenceKerchSub >= 0 ? '+' : ''}${percentagePointDifferenceKerchSub} points this month`;
+        }
+        subHeadlineElement.textContent = subHeadlineText;
+        headlineElement.appendChild(subHeadlineElement);
+
         break;
       
       //Putin
