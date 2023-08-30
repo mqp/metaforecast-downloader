@@ -108,6 +108,8 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
   const headlineElement = container.querySelector('.headline');
   if (headlineElement) {
     let headlineText = '';
+    let subHeadlineElement = document.createElement('h5');
+    let subHeadlineText = '';
     const medianLatestPercent = Math.round(medianLatest * 100);
     const percentagePointDifferencePoints = Math.round(percentagePointDifference * 100);
     switch (dataFileName) {
@@ -147,12 +149,18 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         }
 
         //Escalation sub-headline
-        const subHeadlineElement = document.createElement('h5');
         const idsForSubEscalation = ['metaculus-7449', 'goodjudgmentopen'];
         const latestProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+        const lastDayProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
         const medianLatestSubEscalation = calculateMedian(latestProbabilitiesSubEscalation);
+        const medianLastDaySubEscalation = calculateMedian(lastDayProbabilitiesSubEscalation);
+        const percentagePointDifferenceSubEscalation = Math.round((medianLatestSubEscalation - medianLastDaySubEscalation) * 100);
         const medianLatestPercentSubEscalation = Math.round(medianLatestSubEscalation * 100);
-        let subHeadlineText = `Risk of Russian clash with NATO including US ~${medianLatestPercentSubEscalation}%`;
+        subHeadlineText = `Risk of Russian clash with NATO including US ~${medianLatestPercentSubEscalation}%`;
+        if (Math.abs(percentagePointDifferenceSubEscalation) >= 1) {
+          const directionSub = (percentagePointDifferenceSubEscalation > 0) ? 'up' : 'down';
+          subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubEscalation >= 0 ? '+' : ''}${percentagePointDifferenceSubEscalation} points this month`;
+        }
         subHeadlineElement.textContent = subHeadlineText;
         headlineElement.appendChild(subHeadlineElement);
         break;
@@ -173,7 +181,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         }
 
       //Kerch sub-header
-        const subHeadlineElement = document.createElement('h5');
+        subHeadlineElement = document.createElement('h5');
         const kerchSubId = 'metaculus-12569';
         const latestProbabilityKerchSub = dataMap[kerchSubId]?.latestProbability || 0;
         const lastDayProbabilityKerchSub = dataMap[kerchSubId]?.lastDayProbability || 0;
