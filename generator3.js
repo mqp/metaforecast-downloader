@@ -64,45 +64,6 @@ function calculateProbabilitiesAndTimestamps(datasets) {
   return dataMap;
 }
 
-// Function to Create Table
-function createTable(datasets, dataMap, container) {
-  const tableContainer = container.querySelector('.tableContainer');
-  const table = document.createElement('table');
-  const headerRow = document.createElement('tr');
-  ['ID', 'Latest Probability', 'Latest Timestamp', 'Last Day of Previous Month Probability', 'Last Day of Previous Month Timestamp'].forEach(text => {
-    const th = document.createElement('th');
-    th.appendChild(document.createTextNode(text));
-    headerRow.appendChild(th);
-  });
-  table.appendChild(headerRow);
-
-  datasets.forEach((dataset) => {
-    const row = document.createElement('tr');
-    const id = dataset.id || 'ID Missing';
-    if (!dataset.id) {
-      console.debug('Debug: Missing ID for dataset:', dataset);
-    }
-    const data = dataMap[id];
-    [id, data.latestProbability, data.latestTimestamp, data.lastDayProbability, data.lastDayTimestamp].forEach(text => {
-      const td = document.createElement('td');
-      td.appendChild(document.createTextNode(text));
-      row.appendChild(td);
-    });
-    table.appendChild(row);
-  });
-  tableContainer.appendChild(table);
-}
-
-// Function to display the medians
-function displayMedians(container, medianLatest, medianLastDay) {
-  const medianDisplayElement = container.querySelector('.medianDisplay');
-  if (medianDisplayElement) {
-    medianDisplayElement.textContent = `Latest Median: ${medianLatest}, Last Day of Previous Month Median: ${medianLastDay}`;
-  } else {
-    console.error('Median display element not found in the container.');
-  }
-}
-
 // Function to create headlines
 function createHeadline(container, medianLatest, percentagePointDifference, dataMap, dataFileName) {
   const headlineElement = container.querySelector('.headline');
