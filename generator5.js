@@ -308,7 +308,7 @@ case 'Threads2.json':
   const medianLastDaySubThreads2 = calculateMedian(lastDayProbabilitiesSubThreads2);
   const percentagePointDifferenceSubThreads2 = Math.round((medianLatestSubThreads2 - medianLastDaySubThreads2) * 100);
   const medianLatestPercentSubThreads2 = Math.round(medianLatestSubThreads2 * 100);
-  subHeadlineText = `Elon Musk stays the owner of Twitter: ~${medianLatestPercentSubThreads2}% likely`;
+  subHeadlineText = `Elon Musk: ~${medianLatestPercentSubThreads2}% likely to stay owner of Twitter`;
   if (Math.abs(percentagePointDifferenceSubThreads2) >= 1) {
     const directionSub = (percentagePointDifferenceSubThreads2 > 0) ? 'up' : 'down';
     subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubThreads2 >= 0 ? '+' : ''}${percentagePointDifferenceSubThreads2} points this month`;
