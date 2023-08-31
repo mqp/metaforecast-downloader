@@ -158,7 +158,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
   const highestLastDayProbNuclear = Math.max(...idsForNuclear.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
   const highestProbPercentNuclear = Math.round(highestProbNuclear * 100);
   const highestProbPointDifferenceNuclear = Math.round((highestProbNuclear - highestLastDayProbNuclear) * 100);
-  headlineText = `Atomic bomb used in combat: up to ~${highestProbPercentNuclear}% risk`;
+  headlineText = `Atomic bomb: up to ~${highestProbPercentNuclear}% risk of use in combat`;
   if (Math.abs(highestProbPointDifferenceNuclear) >= 1) {
     const direction = (highestProbPointDifferenceNuclear > 0) ? 'up' : 'down';
     headlineText += `, ${direction} ${highestProbPointDifferenceNuclear >= 0 ? '+' : ''}${highestProbPointDifferenceNuclear} points this month`;
@@ -241,7 +241,7 @@ break;
       const medianLastDayTerritorySubHeadline = calculateMedian(lastDayProbabilitiesTerritorySubHeadline);
       const percentagePointDifferenceTerritorySubHeadline = Math.round((medianLatestTerritorySubHeadline - medianLastDayTerritorySubHeadline) * 100);
       const medianLatestPercentTerritorySubHeadline = Math.round(medianLatestTerritorySubHeadline * 100);
-      subHeadlineText = `DNR/LNR retaken by Ukraine: ~${medianLatestPercentTerritorySubHeadline}% chance`;
+      subHeadlineText = `DNR/LNR: ~${medianLatestPercentTerritorySubHeadline}% chance of being retaken by Ukraine`;
       if (Math.abs(percentagePointDifferenceTerritorySubHeadline) >= 1) {
         const directionSub = (percentagePointDifferenceTerritorySubHeadline > 0) ? 'up' : 'down';
         subHeadlineText += `, ${directionSub} ${percentagePointDifferenceTerritorySubHeadline >= 0 ? '+' : ''}${percentagePointDifferenceTerritorySubHeadline} points this month`;
