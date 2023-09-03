@@ -1,7 +1,7 @@
 import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
-  { name: "Prigozhin quits or flees by Dec 9?", id: "goodjudgmentopen-2908" }, // Updated to take the inverse probability
+//  { name: "Prigozhin quits or flees by Dec 9?", id: "goodjudgmentopen-2908" }, // Updated to take the inverse probability
   { name: "Coup?", id: "metaculus-10246" },
   { name: "Armed civil conflict by 2030?", id: "metaculus-11589" },
   { name: "Prigozhin killed?", id: "manifold-qJTJAf9vafBmAbwnmiKI" },
