@@ -81,10 +81,10 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         const highestProbPercent = Math.round(highestProb * 100);
         const highestProbPointDifference = Math.round((highestProb - highestLastDayProb) * 100);
         headlineText = `Crimea: up to ${highestProbPercent}% chance of territory being retaken`;
-        //if (Math.abs(highestProbPointDifference) >= 1) {
-        //  const direction = (highestProbPointDifference > 0) ? 'up' : 'down';
-        //  headlineText += `, ${direction} ${highestProbPointDifference >= 0 ? '+' : ''}${highestProbPointDifference} points this month`;
-        //}
+        if (Math.abs(highestProbPointDifference) >= 1) {
+          const direction = (highestProbPointDifference > 0) ? 'up' : 'down';
+          headlineText += `, ${direction} ${highestProbPointDifference >= 0 ? '+' : ''}${highestProbPointDifference} points this month`;
+        }
         break;
       
       //Crimea2
