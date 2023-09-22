@@ -1431,6 +1431,10 @@
       {
         "x": 1695275627940,
         "y": 0.03
+      },
+      {
+        "x": 1695361858982,
+        "y": 0.02
       }
     ],
     "url": "https://www.metaculus.com/questions/10246/russian-coup-or-regime-change-by-2024/"
@@ -2671,6 +2675,10 @@
       {
         "x": 1695275627940,
         "y": 0.4
+      },
+      {
+        "x": 1695361858982,
+        "y": 0.4
       }
     ],
     "url": "https://www.metaculus.com/questions/11589/a-large-scale-conflict-within-russia-by-2030/"
@@ -3711,6 +3719,10 @@
       {
         "x": 1695265816593,
         "y": 0.0746248297127241
+      },
+      {
+        "x": 1695352220197,
+        "y": 0.06244911196276381
       }
     ],
     "url": "https://manifold.markets/MetaculusBot/will-a-coup-or-regime-change-take-p"
