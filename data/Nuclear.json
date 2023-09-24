@@ -1439,6 +1439,10 @@
       {
         "x": 1695447993607,
         "y": 0.05
+      },
+      {
+        "x": 1695534203445,
+        "y": 0.05
       }
     ],
     "url": "https://www.metaculus.com/questions/10154/radiation-incident-in-ukraine-by-2024/"
@@ -2286,6 +2290,10 @@
       },
       {
         "x": 1695447993607,
+        "y": 0.01
+      },
+      {
+        "x": 1695534203446,
         "y": 0.01
       }
     ],
@@ -3903,6 +3911,10 @@
       {
         "x": 1695447993603,
         "y": 0.040000000000000036
+      },
+      {
+        "x": 1695534203441,
+        "y": 0.040000000000000036
       }
     ],
     "url": "https://www.metaculus.com/questions/2797/no-non-test-nuclear-detonations-by-2024-01-01/"
@@ -4951,6 +4963,10 @@
       {
         "x": 1695438167237,
         "y": 0.020000000000000028
+      },
+      {
+        "x": 1695524528522,
+        "y": 0.018023627759075622
       }
     ],
     "url": "https://manifold.markets/AndyMartin/will-a-nuclear-weapon-be-launched-i-015e44ed91f5"
