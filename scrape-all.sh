@@ -11,3 +11,4 @@ node Territory.js
 node Threads.js
 node Threads2.js
 node Wagner.js
+node IsraelHamasGazaControl.js
