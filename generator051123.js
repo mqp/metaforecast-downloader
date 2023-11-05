@@ -317,6 +317,9 @@ case 'Threads2.json':
   }
   break;
 
+// Israel Hamas Gaza Control
+// Israel Hamas Leadership
+
       //Default
       default:
         headlineText = `Latest ${medianLatestPercent}%`;

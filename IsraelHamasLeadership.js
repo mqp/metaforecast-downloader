@@ -2,8 +2,8 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
-  { id: "metaculus-19308" },
-  { id: "manifold-kVw4c6CXZlCUAhY1laVR" },
+  { name: "Gaza head Sinwar replaced or captured/killed?", id: "metaculus-19333" },
+  { name: "Army head Deif captured/killed?", id: "manifold-kVw4c6CXZlCUAhY1laVR" },
 ];
 
 function getPoint(id, historyItem) {
@@ -14,4 +14,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => writeJSONOutput("IsraelHamasGazaControl.json", data));
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("IsraelHamasLeadership.json", data));
