@@ -19,4 +19,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => writeJSONOutput("Putin.json", data));
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("Putin2.json", data));
