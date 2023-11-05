@@ -5,7 +5,7 @@ const markets = [
   { name: "Rus nukes Ukr?", id: "metaculus-13171" },
   { name: "Non-test nuke used?", id: "metaculus-2797" }, // Updated to capture No
   { name: "Nuke used in combat?", id: "manifold-CBCpG7AUU4pnsbyBn0bg" },
-  { name: "Rus nukes Ukr by Oct?", id: "goodjudgmentopen-2634" },
+//  { name: "Rus nukes Ukr by Oct?", id: "goodjudgmentopen-2634" },
 ];
 
 function getPoint(id, historyItem) {
