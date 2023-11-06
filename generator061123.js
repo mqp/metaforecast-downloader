@@ -321,7 +321,7 @@ case 'Threads2.json':
 // IsraelHamasCeasefire
 // Israel-Hamas ceasefire: XX% chance, up +YY point this month
 case 'IsraelHamasCeasefire.json':
-  const idsForHamasCeasefire = ['goodjudgmentopen-2631', 'polymarket-0x950eb697'];
+  const idsForHamasCeasefire = ['polymarket-0x3f0d956e'];
   const latestProbabilitiesHamasCeasefire = idsForHamasCeasefire.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
   const lastDayProbabilitiesHamasCeasefire = idsForHamasCeasefire.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
   const medianLatestHamasCeasefire = calculateMedian(latestProbabilitiesHamasCeasefire);
@@ -335,7 +335,7 @@ case 'IsraelHamasCeasefire.json':
   }
 // sub-IsraelHamasCeasefire
 // Hamas surrender: XX% likely, up +YY point this month
-const idsForSubHamasCeasefire = ['metaculus-14257', 'manifold-SttdxBP4Edxqzq0ScDCH'];
+const idsForSubHamasCeasefire = ['polymarket-0x25b8502f', 'manifold-wwqLiPRHoieeQT6Ncr0R'];
 const latestProbabilitiesSubHamasCeasefire = idsForSubHamasCeasefire.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
 const lastDayProbabilitiesSubHamasCeasefire = idsForSubHamasCeasefire.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
 const medianLatestSubHamasCeasefire = calculateMedian(latestProbabilitiesSubHamasCeasefire);
@@ -377,7 +377,7 @@ case 'IsraelHamasHezbollah.json':
 // IsraelHamasSaudi
 // Israel-Saudi: XX% chance of establishing relations, up +YY points this month
 case 'IsraelHamasSaudi.json':
-  const idsForIsraelHamasSaudi = ['goodjudgmentopen-2631', 'polymarket-0x950eb697'];
+  const idsForIsraelHamasSaudi = ['metaculus-17990', 'manifold-7LxcLPJKi3jA86XghgQE'];
   const latestProbabilitiesIsraelHamasSaudi = idsForIsraelHamasSaudi.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
   const lastDayProbabilitiesIsraelHamasSaudi = idsForIsraelHamasSaudi.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
   const medianLatestIsraelHamasSaudi = calculateMedian(latestProbabilitiesIsraelHamasSaudi);
