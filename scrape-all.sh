@@ -16,5 +16,4 @@ node IsraelHamasGazaControl.js
 node IsraelHamasHezbollah.js
 node IsraelHamasIran.js
 node IsraelHamasIran2.js
-node IsraelHamasLeadership.js
 node IsraelHamasSaudi.js
