@@ -115,6 +115,10 @@
       {
         "x": 1699250376627,
         "y": 0.05
+      },
+      {
+        "x": 1699336674081,
+        "y": 0.05
       }
     ],
     "url": "https://www.metaculus.com/questions/19332/israel-deadly-attack-on-iran-before-2024/"
@@ -274,6 +278,10 @@
       },
       {
         "x": 1699240178279,
+        "y": 0.3087
+      },
+      {
+        "x": 1699326526021,
         "y": 0.3087
       }
     ],
@@ -1163,6 +1171,10 @@
       {
         "x": 1699250376626,
         "y": 0.311
+      },
+      {
+        "x": 1699336674077,
+        "y": 0.32
       }
     ],
     "url": "https://www.metaculus.com/questions/14899/1000-deaths-from-israeliran-conflict/"
@@ -2247,6 +2259,10 @@
       {
         "x": 1699240274436,
         "y": 0.10159950679263542
+      },
+      {
+        "x": 1699326626299,
+        "y": 0.1009521993960694
       }
     ],
     "url": "https://manifold.markets/BTE/will-there-be-a-military-conflict-b"
