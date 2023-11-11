@@ -1631,6 +1631,10 @@
       {
         "x": 1699595983717,
         "y": 0.99
+      },
+      {
+        "x": 1699682500581,
+        "y": 0.99
       }
     ],
     "url": "https://www.metaculus.com/questions/10745/russian-control-of-new-territory-2024-01-01/"
@@ -2431,6 +2435,10 @@
       {
         "x": 1699585751224,
         "y": 0.0015
+      },
+      {
+        "x": 1699672138333,
+        "y": 0
       }
     ],
     "url": "https://www.gjopen.com/questions/2859-when-will-all-military-forces-of-the-russian-federation-cease-to-be-in-the-luhansk-and-donetsk-oblasts-in-ukraine"
@@ -4066,6 +4074,10 @@
       },
       {
         "x": 1699595983717,
+        "y": 0.01
+      },
+      {
+        "x": 1699682500581,
         "y": 0.01
       }
     ],
