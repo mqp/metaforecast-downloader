@@ -963,6 +963,10 @@
       {
         "x": 1699941664426,
         "y": 0.01
+      },
+      {
+        "x": 1700028123219,
+        "y": 0.01
       }
     ],
     "url": "https://www.metaculus.com/questions/13531/ukraine-to-cut-land-bridge-to-crimea-by-2024/"
@@ -2095,6 +2099,10 @@
       {
         "x": 1699931449198,
         "y": 0.0374324845868317
+      },
+      {
+        "x": 1700017846341,
+        "y": 0.03000000000000003
       }
     ],
     "url": "https://manifold.markets/MetaculusBot/will-ukraine-sever-the-land-bridge"
