@@ -983,6 +983,10 @@
       {
         "x": 1700460270968,
         "y": 0.01
+      },
+      {
+        "x": 1700546627958,
+        "y": 0.01
       }
     ],
     "url": "https://www.metaculus.com/questions/13985/bilateral-ceasefire-in-ukraine-before-2024/"
@@ -1463,6 +1467,10 @@
       {
         "x": 1700449774638,
         "y": 0.02
+      },
+      {
+        "x": 1700536159632,
+        "y": 0.0242
       }
     ],
     "url": "https://www.gjopen.com/questions/2951-when-will-russia-and-ukraine-sign-or-announce-an-agreement-to-end-the-current-conflict-in-ukraine"
@@ -2318,6 +2326,10 @@
       },
       {
         "x": 1700449876106,
+        "y": 0.03323153834890272
+      },
+      {
+        "x": 1700536262675,
         "y": 0.03323153834890272
       }
     ],
