@@ -1675,6 +1675,10 @@
       {
         "x": 1700633110630,
         "y": 0.99
+      },
+      {
+        "x": 1700719383081,
+        "y": 0.99
       }
     ],
     "url": "https://www.metaculus.com/questions/10745/russian-control-of-new-territory-2024-01-01/"
@@ -2522,6 +2526,10 @@
       },
       {
         "x": 1700622585029,
+        "y": 0
+      },
+      {
+        "x": 1700708963106,
         "y": 0
       }
     ],
@@ -4203,6 +4211,10 @@
       {
         "x": 1700633110630,
         "y": 0.01
+      },
+      {
+        "x": 1700719383081,
+        "y": 0.005
       }
     ],
     "url": "https://www.metaculus.com/questions/10738/ukraine-controls-dnrlnr-on-jan-1-2024/"
