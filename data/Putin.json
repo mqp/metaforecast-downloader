@@ -1006,6 +1006,10 @@
       {
         "x": 1700978912327,
         "y": 0.99
+      },
+      {
+        "x": 1701065223386,
+        "y": 0.99
       }
     ],
     "url": "https://www.metaculus.com/questions/13930/putin-presidency-on-jan-1-2024/"
@@ -1137,6 +1141,10 @@
       {
         "x": 1700979040023,
         "y": 0.9645
+      },
+      {
+        "x": 1701065339807,
+        "y": 0.97
       }
     ],
     "url": "https://polymarket.com/market/will-putin-remain-president-of-russia-through-2023"
@@ -2300,6 +2308,10 @@
       {
         "x": 1700968307309,
         "y": 0.9777876031031255
+      },
+      {
+        "x": 1701054688118,
+        "y": 0.9749143683732854
       }
     ],
     "url": "https://manifold.markets/ACXBot/1-will-vladimir-putin-be-president"
