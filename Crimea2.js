@@ -9,9 +9,14 @@ const markets = [
 ];
 
 function getPoint(id, historyItem) {
+  const targetOption = id === "goodjudgmentopen-3089" ? "Not before 30 July 2024" : "Yes";
   for (const option of historyItem.options) {
-    if (option.name === 'Yes') {
-      return { x: historyItem.fetched * 1000, y: option.probability }
+    if (option.name === targetOption) {
+      let probability = option.probability;
+      if (id === "goodjudgmentopen-3089") {
+      probability = 1 - probability;
+      }
+      return { x: historyItem.fetched * 1000, y: probability }
     }
   }
 }
