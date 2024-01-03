@@ -363,36 +363,32 @@ case 'IsraelHamasGazaControl.json':
            // }
            // break;
 
-           const idsForIsraelHamasGazaControl = ['polymarket-0xfeabd92e'];
-
-           const latestProbabilitiesForIsraelHamasGazaControl = idsForIsraelHamasGazaControl.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-           const lastDayProbabilitiesForIsraelHamasGazaControl = idsForIsraelHamasGazaControl.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-           const medianLatestForIsraelHamasGazaControl = calculateMedian(latestProbabilitiesForIsraelHamasGazaControl);
-           const medianLastDayForIsraelHamasGazaControl = calculateMedian(lastDayProbabilitiesForIsraelHamasGazaControl);
-           const percentagePointDifferenceForIsraelHamasGazaControl = Math.round((medianLatestForIsraelHamasGazaControl - medianLastDayForIsraelHamasGazaControl) * 100);
-           const medianLatestPercentForIsraelHamasGazaControl = Math.round(medianLatestForIsraelHamasGazaControl * 100);
-           
-           let headlineText = `Hamas ~${medianLatestPercentForIsraelHamasGazaControl}% likely to lose Gaza by Feb`;
-           if (Math.abs(percentagePointDifferenceForIsraelHamasGazaControl) >= 1) {
-             const direction = (percentagePointDifferenceForIsraelHamasGazaControl > 0) ? 'up' : 'down';
-             headlineText += `, ${direction} ${percentagePointDifferenceForIsraelHamasGazaControl >= 0 ? '+' : ''}${percentagePointDifferenceForIsraelHamasGazaControl} points this month`;
+           const idsForGazaControl = ['polymarket-0xfeabd92e'];
+           const latestProbabilitiesGazaControl = idsForGazaControl.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+           const lastDayProbabilitiesGazaControl = idsForGazaControl.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+           const medianLatestGazaControl = calculateMedian(latestProbabilitiesGazaControl);
+           const medianLastDayGazaControl = calculateMedian(lastDayProbabilitiesGazaControl);
+           const percentagePointDifferenceGazaControl = Math.round((medianLatestGazaControl - medianLastDayGazaControl) * 100);
+           const medianLatestPercentGazaControl = Math.round(medianLatestGazaControl * 100);
+           headlineText = `Hamas ~${medianLatestPercentGazaControl}% likely to lose power in Gaza by Feb`;
+           if (Math.abs(percentagePointDifferenceGazaControl) >= 1) {
+             const direction = (percentagePointDifferenceGazaControl > 0) ? 'up' : 'down';
+             headlineText += `, ${direction} ${percentagePointDifferenceGazaControl >= 0 ? '+' : ''}${percentagePointDifferenceGazaControl} points this month`;
            }
-           
-          //sub-IsraelHamasGazaControl
-          const idsForSubIsraelHamasGazaControl = ['goodjudgmentopen-3069'];
-          const latestProbabilitiesForSubIsraelHamasGazaControl = idsForSubIsraelHamasGazaControl.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-           const lastDayProbabilitiesForSubIsraelHamasGazaControl = idsForSubIsraelHamasGazaControl.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-           const medianLatestForSubIsraelHamasGazaControl = calculateMedian(latestProbabilitiesForSubIsraelHamasGazaControl);
-           const medianLastDayForSubIsraelHamasGazaControl = calculateMedian(lastDayProbabilitiesForSubIsraelHamasGazaControl);
-           const percentagePointDifferenceForSubIsraelHamasGazaControl = Math.round((medianLatestForSubIsraelHamasGazaControl - medianLastDayForSubIsraelHamasGazaControl) * 100);
-           const medianLatestPercentForSubIsraelHamasGazaControl = Math.round(medianLatestForSubIsraelHamasGazaControl * 100);
-           
-           let subHeadlineText = `IDF ground forces ~${medianLatestPercentForSubIsraelHamasGazaControl}% likely to leave Gaza by Oct 10`;
-           if (Math.abs(percentagePointDifferenceForSubIsraelHamasGazaControl) >= 1) {
-             const direction = (percentagePointDifferenceForSubIsraelHamasGazaControl > 0) ? 'up' : 'down';
-             subHeadlineText += `, ${direction} ${percentagePointDifferenceForSubIsraelHamasGazaControl >= 0 ? '+' : ''}${percentagePointDifferenceForSubIsraelHamasGazaControl} points this month`;
-           }  
-          break;
+         
+             const idsForSubGazaControl = ['goodjudgmentopen-3069'];
+             const latestProbabilitiesSubGazaControl = idsForSubGazaControl.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+             const lastDayProbabilitiesSubGazaControl = idsForSubGazaControl.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+             const medianLatestSubGazaControl = calculateMedian(latestProbabilitiesSubGazaControl);
+             const medianLastDaySubGazaControl = calculateMedian(lastDayProbabilitiesSubGazaControl);
+             const percentagePointDifferenceSubGazaControl = Math.round((medianLatestSubGazaControl - medianLastDaySubGazaControl) * 100);
+             const medianLatestPercentSubGazaControl = Math.round(medianLatestSubGazaControl * 100);
+             subHeadlineText = `IDF ground forces ~${medianLatestPercentSubGazaControl}% likely to leave Gaza by Oct`;
+             if (Math.abs(percentagePointDifferenceSubGazaControl) >= 1) {
+               const directionSub = (percentagePointDifferenceSubGazaControl > 0) ? 'up' : 'down';
+               subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubGazaControl >= 0 ? '+' : ''}${percentagePointDifferenceSubGazaControl} points this month`;
+             }
+             break;
 
 // IsraelHamasHezbollah
 // Hezbollah: up to XX% risk of conflict with Israel
