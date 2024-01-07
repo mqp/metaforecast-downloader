@@ -393,7 +393,7 @@ case 'IsraelHamasGazaControl.json':
 // IsraelHamasHezbollah
 // Hezbollah: up to XX% risk of conflict with Israel
 case 'IsraelHamasHezbollah.json':
-  const idsForHezbollah = ['manifold-l9dhLkCSjs5m0baSCsgf', 'goodjudgmentopen-3163', 'metaculus-19850'];
+  const idsForHezbollah = ['manifold-l9dhLkCSjs5m0baSCsgf', 'goodjudgmentopen-3163'];
   const highestProb2 = Math.max(...idsForHezbollah.map(id => dataMap[id]?.latestProbability || 0));
   const highestLastDayProb2 = Math.max(...idsForHezbollah.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
   const highestProbPercent2 = Math.round(highestProb2 * 100);
