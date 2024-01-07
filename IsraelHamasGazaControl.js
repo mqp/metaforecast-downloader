@@ -4,7 +4,7 @@ const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
 //  { id: "metaculus-19308" },
 //  { id: "manifold-kVw4c6CXZlCUAhY1laVR" },
-{ name: "Hamas loses power by Feb?", id: "polymarket-0xfeabd92e" },
+// { name: "Hamas loses power by Feb?", id: "polymarket-0xfeabd92e" },
 { name: "Hamas loses power by Jan 15?", id: "manifold-FsaZWdy6oL6gRZJe8RGJ" },
 { name: "IDF exits Gaza by Oct 10?", id: "goodjudgmentopen-3069" },
 ];
