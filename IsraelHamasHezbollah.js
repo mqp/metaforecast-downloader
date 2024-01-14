@@ -7,7 +7,7 @@ const markets = [
 //  { name: "Israel invades Lebanon?", id: "goodjudgmentopen-3062" },
 { name: "Israel-Hezbollah combat?", id: "manifold-l9dhLkCSjs5m0baSCsgf" },
 { name: "IDF invades Lebanon with AFVs by Mar 15?", id: "goodjudgmentopen-3163" },
-{ name: "Israel war with Lebanon, Jordon or Egypt?", id: "metaculus-19850" },
+// { name: "Israel war with Lebanon, Jordon or Egypt?", id: "metaculus-19850" },
 
 ];
 
