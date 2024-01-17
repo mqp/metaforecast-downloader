@@ -172,15 +172,15 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
   }
 
   //sub-Nuclear
-  const latestProbabilityNuclearSub = dataMap['goodjudgmentopen-3016']?.latestProbability || 0;
-  const lastDayProbabilityNuclearSub = dataMap['goodjudgmentopen-3016']?.lastDayProbability || 0;
-  const percentagePointDifferenceNuclearSub = Math.round((latestProbabilityNuclearSub - lastDayProbabilityNuclearSub) * 100);
-  const latestPercentNuclearSub = Math.round(latestProbabilityNuclearSub * 100);
-  subHeadlineText = `Russia ~${latestPercentNuclearSub}% likely to move nuclear weapons into Ukrainian boundries`;
-  if (Math.abs(percentagePointDifferenceNuclearSub) >= 1) {
-    const directionSub = (percentagePointDifferenceNuclearSub > 0) ? 'up' : 'down';
-    subHeadlineText += `, ${directionSub} ${percentagePointDifferenceNuclearSub >= 0 ? '+' : ''}${percentagePointDifferenceNuclearSub} points this month`;
-  }
+//  const latestProbabilityNuclearSub = dataMap['goodjudgmentopen-3016']?.latestProbability || 0;
+//const lastDayProbabilityNuclearSub = dataMap['goodjudgmentopen-3016']?.lastDayProbability || 0;
+ // const percentagePointDifferenceNuclearSub = Math.round((latestProbabilityNuclearSub - lastDayProbabilityNuclearSub) * 100);
+ // const latestPercentNuclearSub = Math.round(latestProbabilityNuclearSub * 100);
+ // subHeadlineText = `Russia ~${latestPercentNuclearSub}% likely to move nuclear weapons into Ukrainian boundries`;
+ // if (Math.abs(percentagePointDifferenceNuclearSub) >= 1) {
+ //   const directionSub = (percentagePointDifferenceNuclearSub > 0) ? 'up' : 'down';
+ //   subHeadlineText += `, ${directionSub} ${percentagePointDifferenceNuclearSub >= 0 ? '+' : ''}${percentagePointDifferenceNuclearSub} points this month`;
+ // }
   break;
        
       // Peace
