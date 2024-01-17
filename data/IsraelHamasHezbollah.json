@@ -387,6 +387,18 @@
       {
         "x": 1705115409861,
         "y": 0.5009588764414828
+      },
+      {
+        "x": 1705201806994,
+        "y": 0.5104547394654263
+      },
+      {
+        "x": 1705288263368,
+        "y": 0.5390837141126387
+      },
+      {
+        "x": 1705374627369,
+        "y": 0.49955219015327007
       }
     ],
     "url": "https://manifold.markets/NADZOR/will-hezbollah-directly-engage-in-c"
@@ -511,94 +523,20 @@
       {
         "x": 1705115299749,
         "y": 0.2839
+      },
+      {
+        "x": 1705201691065,
+        "y": 0.2952
+      },
+      {
+        "x": 1705288128591,
+        "y": 0.2983
+      },
+      {
+        "x": 1705374513097,
+        "y": 0.2833
       }
     ],
     "url": "https://www.gjopen.com/questions/3163-will-the-israeli-defense-forces-idf-invade-lebanon-with-tanks-and-or-armored-vehicles-before-15-march-2024"
-  },
-  {
-    "id": "metaculus-19850",
-    "name": "Israel war with Lebanon, Jordon or Egypt?",
-    "site": "Metaculus",
-    "points": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      {
-        "x": 1704177636993,
-        "y": 0.05
-      },
-      {
-        "x": 1704262302024,
-        "y": 0.05
-      },
-      {
-        "x": 1704348265970,
-        "y": 0.05
-      },
-      {
-        "x": 1704434552613,
-        "y": 0.05
-      },
-      {
-        "x": 1704520948051,
-        "y": 0.05
-      },
-      {
-        "x": 1704607303669,
-        "y": 0.05
-      },
-      {
-        "x": 1704693612986,
-        "y": 0.05
-      },
-      {
-        "x": 1704780115995,
-        "y": 0.06
-      },
-      {
-        "x": 1704866654575,
-        "y": 0.05
-      },
-      {
-        "x": 1704952831899,
-        "y": 0.05
-      },
-      {
-        "x": 1705039205838,
-        "y": 0.05
-      },
-      {
-        "x": 1705125753104,
-        "y": 0.05
-      }
-    ],
-    "url": "https://www.metaculus.com/questions/19850/israel-war-with-neighbors/"
   }
 ]
