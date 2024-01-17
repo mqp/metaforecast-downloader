@@ -471,7 +471,21 @@ case 'IsraelHamasIran.json':
 // IsraelHamasIran2
 // Iran: nuclear weapons
 case 'IsraelHamasIran2.json':
-  headlineText = `Iran: nuclear weapons`;
+  //headlineText = `Iran: nuclear weapons`;
+
+  const idsForIsraelHamasIranNukes = ['metaculus-5253'];
+  const latestProbabilitiesIsraelHamasIranNukes = idsForIsraelHamasIranNukes.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+  const lastDayProbabilitiesIsraelHamasIranNukes = idsForIsraelHamasIranNukes.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+  const medianLatestIsraelHamasIranNukes = calculateMedian(latestProbabilitiesIsraelHamasIranNukes);
+  const medianLastDayIsraelHamasIranNukes = calculateMedian(lastDayProbabilitiesIsraelHamasIranNukes);
+  const percentagePointDifferenceIsraelHamasIranNukes = Math.round((medianLatestIsraelHamasIranNukes - medianLastDayIsraelHamasIranNukes) * 100);
+  const medianLatestPercentIsraelHamasIranNukes = Math.round(medianLatestIsraelHamasIranNukes * 100);
+  headlineText = `Iran ~${medianLatestPercentIsraelHamasIranNukes}% likely to have nuclear weapons by 2030`;
+  if (Math.abs(percentagePointDifferenceIsraelHamasIranNukes) >= 1) {
+    const direction = (percentagePointDifferenceIsraelHamasIranNukes > 0) ? 'up' : 'down';
+    headlineText += `, ${direction} ${percentagePointDifferenceIsraelHamasIranNukes >= 0 ? '+' : ''}${percentagePointDifferenceIsraelHamasIranNukes} points this month`;
+  }
+
   break;
 
 //Default
