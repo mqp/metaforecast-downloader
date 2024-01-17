@@ -76,12 +76,12 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
 
     //Crimea     
       case 'Crimea.json':
-        const idsForCrimea = ['goodjudgmentopen-3164', 'manifold-8dD3vNDbHnPCx3movLl9', 'metaculus-10737'];
+        const idsForCrimea = ['goodjudgmentopen-3164', 'manifold-el2oeAPlwm4u0LBKLQXx', 'manifold-p3UsYkHmZ6Xj09ybEo08'];
         const highestProb = Math.max(...idsForCrimea.map(id => dataMap[id]?.latestProbability || 0));
         const highestLastDayProb = Math.max(...idsForCrimea.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
         const highestProbPercent = Math.round(highestProb * 100);
         const highestProbPointDifference = Math.round((highestProb - highestLastDayProb) * 100);
-        headlineText = `Crimea: up to ${highestProbPercent}% chance of territory being retaken`;
+        headlineText = `Crimea: up to ${highestProbPercent}% chance of territory being retaken by 2027`;
         if (Math.abs(highestProbPointDifference) >= 1) {
           const direction = (highestProbPointDifference > 0) ? 'up' : 'down';
           headlineText += `, ${direction} ${highestProbPointDifference >= 0 ? '+' : ''}${highestProbPointDifference} points this month`;
@@ -90,12 +90,12 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
       
       //Crimea2
       case 'Crimea2.json':
-        const idsForCrimea2 = ['metaculus-20533', 'goodjudgmentopen-3089', 'metaculus-13531'];
+        const idsForCrimea2 = ['metaculus-20533', 'goodjudgmentopen-3089'];
         const highestProbCrimea2 = Math.max(...idsForCrimea2.map(id => dataMap[id]?.latestProbability || 0));
         const highestLastDayProbCrimea2 = Math.max(...idsForCrimea2.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
         const highestProbPercentCrimea2 = Math.round(highestProbCrimea2 * 100);
         const highestProbPointDifferenceCrimea2 = Math.round((highestProbCrimea2 - highestLastDayProbCrimea2) * 100);
-        headlineText = `Crimea land bridge: up to ${highestProbPercentCrimea2}% chance of being cut`;
+        headlineText = `Crimea land bridge: up to ${highestProbPercentCrimea2}% chance of being cut in 2024`;
         if (Math.abs(highestProbPointDifferenceCrimea2) >= 1) {
           const direction = (highestProbPointDifferenceCrimea2 > 0) ? 'up' : 'down';
           headlineText += `, ${direction} ${highestProbPointDifferenceCrimea2 >= 0 ? '+' : ''}${highestProbPointDifferenceCrimea2} points this month`;
@@ -263,7 +263,7 @@ break;
       const medianLastDayTerritoryHeadline = calculateMedian(lastDayProbabilitiesTerritoryHeadline);
       const percentagePointDifferenceTerritoryHeadline = Math.round((medianLatestTerritoryHeadline - medianLastDayTerritoryHeadline) * 100);
       const medianLatestPercentTerritoryHeadline = Math.round(medianLatestTerritoryHeadline * 100);
-      headlineText = `Russia gains territory: ~${medianLatestPercentTerritoryHeadline}% likely`;
+      headlineText = `Russia ~${medianLatestPercentTerritoryHeadline}% likely to gain new territory by 2026`;
       if (Math.abs(percentagePointDifferenceTerritoryHeadline) >= 1) {
         const direction = (percentagePointDifferenceTerritoryHeadline > 0) ? 'up' : 'down';
         headlineText += `, ${direction} ${percentagePointDifferenceTerritoryHeadline >= 0 ? '+' : ''}${percentagePointDifferenceTerritoryHeadline} points this month`;
@@ -277,7 +277,7 @@ break;
       const medianLastDayTerritorySubHeadline = calculateMedian(lastDayProbabilitiesTerritorySubHeadline);
       const percentagePointDifferenceTerritorySubHeadline = Math.round((medianLatestTerritorySubHeadline - medianLastDayTerritorySubHeadline) * 100);
       const medianLatestPercentTerritorySubHeadline = Math.round(medianLatestTerritorySubHeadline * 100);
-      subHeadlineText = `DNR/LNR: ~${medianLatestPercentTerritorySubHeadline}% chance of being retaken by Ukraine`;
+      subHeadlineText = `Ukraine ~${medianLatestPercentTerritorySubHeadline}% likely to retake DNR/LNR by July 2024`;
       if (Math.abs(percentagePointDifferenceTerritorySubHeadline) >= 1) {
         const directionSub = (percentagePointDifferenceTerritorySubHeadline > 0) ? 'up' : 'down';
         subHeadlineText += `, ${directionSub} ${percentagePointDifferenceTerritorySubHeadline >= 0 ? '+' : ''}${percentagePointDifferenceTerritorySubHeadline} points this month`;
