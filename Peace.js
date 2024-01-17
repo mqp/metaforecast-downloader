@@ -29,7 +29,7 @@ function getPoint(id, historyItem) {
       let probability = option.probability;
       // Invert the probability if the targetOption is 'Not before 1 October 2024'
       if (inverse) {
-        probability = 100 - probability;
+        probability = 1 - probability;
       }
       return { x: historyItem.fetched * 1000, y: probability };
     }
