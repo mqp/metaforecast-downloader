@@ -2,10 +2,14 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
 //  { name: "Prigozhin quits or flees by Dec 9?", id: "goodjudgmentopen-2908" }, // Updated to take the inverse probability
-  { name: "Coup?", id: "metaculus-10246" },
+//  { name: "Coup?", id: "metaculus-10246" },
+{ name: "Next leader disapproves of UKR invasion?", id: "metaculus-10949" },
+{ name: "Democracy 5 years post-Putin?", id: "metaculus-15098" },
+  { name: "Federal subject breaks away by 2025?", id: "metaculus-12568" },
   { name: "Armed civil conflict by 2030?", id: "metaculus-11589" },
+  { name: "Territory reduced by ≥1% by 2040?", id: "metaculus-15211" },
 //  { name: "Prigozhin killed?", id: "manifold-qJTJAf9vafBmAbwnmiKI" },
-  { name: "Coup?", id: "manifold-onhTHDgQVDpX6V5inItM" },
+//  { name: "Coup?", id: "manifold-onhTHDgQVDpX6V5inItM" },
 ];
 
 function getPoint(id, historyItem) {
