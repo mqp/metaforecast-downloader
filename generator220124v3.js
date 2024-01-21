@@ -512,7 +512,7 @@ case 'TrumpDisqualified.json':
   const medianLastDayTrumpDisqualified = calculateMedian(lastDayProbabilitiesTrumpDisqualified);
   const percentagePointDifferenceTrumpDisqualified = Math.round((medianLatestTrumpDisqualified - medianLastDayTrumpDisqualified) * 100);
   const medianLatestPercentTrumpDisqualified = Math.round(medianLatestTrumpDisqualified * 100);
-  headlineText = `Trump ~${medianLatestPercentTrumpDisqualified}% likely to be blocked from the primary of any state`;
+  headlineText = `Trump ~${medianLatestPercentTrumpDisqualified}% likely to be blocked from primary of any state`;
   if (Math.abs(percentagePointDifferenceTrumpDisqualified) >= 1) {
     const direction = (percentagePointDifferenceTrumpDisqualified > 0) ? 'up' : 'down';
     headlineText += `, ${direction} ${percentagePointDifferenceTrumpDisqualified >= 0 ? '+' : ''}${percentagePointDifferenceTrumpDisqualified} points this month`;
@@ -616,7 +616,7 @@ const medianLatestSubTrumpPresident = calculateMedian(latestProbabilitiesSubTrum
 const medianLastDaySubTrumpPresident = calculateMedian(lastDayProbabilitiesSubTrumpPresident);
 const percentagePointDifferenceSubTrumpPresident = Math.round((medianLatestSubTrumpPresident - medianLastDaySubTrumpPresident) * 100);
 const medianLatestPercentSubTrumpPresident = Math.round(medianLatestSubTrumpPresident * 100);
-subHeadlineText = `Trump ~${medianLatestPercentSubTrumpPresident}% likely to be re-elected`;
+subHeadlineText = `Trump specifically ~${medianLatestPercentSubTrumpPresident}% likely to be re-elected`;
 if (Math.abs(percentagePointDifferenceSubTrumpPresident) >= 1) {
   const directionSub = (percentagePointDifferenceSubTrumpPresident > 0) ? 'up' : 'down';
   subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubTrumpPresident >= 0 ? '+' : ''}${percentagePointDifferenceSubTrumpPresident} points this month`;
