@@ -4,7 +4,7 @@ const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
 { name: "Relected?", id: "goodjudgmentopen-2851" },
 { name: "Relected?", id: "manifold-SsAdHNNaI9hRRMe1XqgG" },
-{ name: "If vs Biden, then relected?", id: "metaculus-8483" },
+//{ name: "If vs Biden, then relected?", id: "metaculus-8483" },
 { name: "GOP wins?", id: "smarkets-11525542" },
 { name: "GOP wins?", id: "metaculus-6478" },
 { name: "GOP wins?", id: "predictit-6867" },
