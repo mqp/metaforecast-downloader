@@ -1,6 +1,7 @@
 [
   {
     "id": "predictit-7053",
+    "site": "PredictIt",
     "points": [
       {
         "x": 1646524882000,
@@ -3898,6 +3899,7 @@
   },
   {
     "id": "smarkets-11449665",
+    "site": "Smarkets",
     "points": [
       {
         "x": 1646524714000,

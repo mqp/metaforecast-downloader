@@ -2490,6 +2490,7 @@
   {
     "id": "smarkets-11525542",
     "name": "GOP wins?",
+    "site": "Smarkets",
     "points": [
       {
         "x": 1646524929000,
@@ -6957,6 +6958,7 @@
   {
     "id": "predictit-6867",
     "name": "GOP wins?",
+    "site": "PredictIt",
     "points": [
       {
         "x": 1646524878000,
