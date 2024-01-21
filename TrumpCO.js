@@ -29,4 +29,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => writeJSONOutput("IsraelHamasGazaControl.json", data));
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("TrumpCO.json", data));
