@@ -23,3 +23,4 @@ node TrumpJail.js
 node TrumpNH.js
 node TrumpNomination.js
 node TrumpPresident.js
+node TrumpSC.js
