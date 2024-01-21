@@ -5,7 +5,7 @@ const markets = [
 //{ id: "predictit-7053" },
 { name: "On general ballot?", id: "metaculus-20708" },
 { name: "On primary ballot?", id: "manifold-z3rcPqJXZCVjaOxIpY6A" },
-{ name: "On primary ballot?", id: "goodjudgmentopen-3210" },
+//{ name: "On primary ballot?", id: "goodjudgmentopen-3210" },
 { name: "On primary ballot by Mar 5?", id: "smarkets-57942131" },
 
 ];

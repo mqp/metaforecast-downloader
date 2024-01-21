@@ -512,7 +512,7 @@ case 'TrumpDisqualified.json':
   const medianLastDayTrumpDisqualified = calculateMedian(lastDayProbabilitiesTrumpDisqualified);
   const percentagePointDifferenceTrumpDisqualified = Math.round((medianLatestTrumpDisqualified - medianLastDayTrumpDisqualified) * 100);
   const medianLatestPercentTrumpDisqualified = Math.round(medianLatestTrumpDisqualified * 100);
-  headlineText = `Trump ~${medianLatestPercentTrumpDisqualified}% likely to be blocked from the primary of any state`;
+  headlineText = `Trump ~${medianLatestPercentTrumpDisqualified}% likely to be blocked from primary of any state`;
   if (Math.abs(percentagePointDifferenceTrumpDisqualified) >= 1) {
     const direction = (percentagePointDifferenceTrumpDisqualified > 0) ? 'up' : 'down';
     headlineText += `, ${direction} ${percentagePointDifferenceTrumpDisqualified >= 0 ? '+' : ''}${percentagePointDifferenceTrumpDisqualified} points this month`;

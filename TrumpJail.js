@@ -4,7 +4,7 @@ const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
 { name: "Serves time by Jul 2028?", id: "metaculus-957" },
 { name: "Serves ≥30 days by 2030?", id: "metaculus-10832" },
-{ name: "Guilty in Manhattan case by Nov 5?", id: "metaculus-15778" },
+//{ name: "Guilty in Manhattan case by Nov 5?", id: "metaculus-15778" },
 { name: "Criminal charges for insurrection by Jul 13?", id: "goodjudgmentopen-3183" },
 { name: "At least 1 federal conviction in 2024?", id: "metaculus-18233" },
 ];
