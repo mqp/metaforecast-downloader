@@ -489,7 +489,7 @@ case 'IsraelHamasIran.json':
 
 // TrumpCO
 case 'TrumpCO.json':
-  const idsForTrumpCO = ['manifold-z3rcPqJXZCVjaOxIpY6A', 'goodjudgmentopen-3210'];
+  const idsForTrumpCO = ['manifold-z3rcPqJXZCVjaOxIpY6A'];
   const latestProbabilitiesTrumpCO = idsForTrumpCO.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
   const lastDayProbabilitiesTrumpCO = idsForTrumpCO.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
   const medianLatestTrumpCO = calculateMedian(latestProbabilitiesTrumpCO);

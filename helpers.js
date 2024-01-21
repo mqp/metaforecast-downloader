@@ -37,6 +37,8 @@ export function getMetaforecastSiteName(id) {
   case 'insight': return 'Insight';
   case 'infer': return 'Infer';
   case 'polymarket': return 'Polymarket';
+  case 'smarkets': return 'Smarkets';
+  case 'predictit': return 'PredictIt';
   }
 }
  
