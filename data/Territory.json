@@ -879,6 +879,10 @@
       {
         "x": 1705989321356,
         "y": 0.26
+      },
+      {
+        "x": 1706075947480,
+        "y": 0.25
       }
     ],
     "url": "https://www.metaculus.com/questions/19724/russia-expanded-territory-in-ukraine-in-2026/"
@@ -2435,6 +2439,10 @@
       {
         "x": 1705989321355,
         "y": 0.05
+      },
+      {
+        "x": 1706075947480,
+        "y": 0.05
       }
     ],
     "url": "https://www.metaculus.com/questions/18865/ukraine-takes-control-of-donetsk-and-luhansk/"
@@ -2698,6 +2706,10 @@
       },
       {
         "x": 1705978993950,
+        "y": 0.2200000000000001
+      },
+      {
+        "x": 1706065477498,
         "y": 0.2200000000000001
       }
     ],
