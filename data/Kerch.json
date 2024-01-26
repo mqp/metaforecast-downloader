@@ -1923,6 +1923,10 @@
       {
         "x": 1706162125982,
         "y": 0.65
+      },
+      {
+        "x": 1706248667615,
+        "y": 0.65
       }
     ],
     "url": "https://www.metaculus.com/questions/10807/zelenskyy-president-of-ukraine-re-election/"
@@ -3855,6 +3859,10 @@
       {
         "x": 1706162125982,
         "y": 0.3
+      },
+      {
+        "x": 1706248667615,
+        "y": 0.3
       }
     ],
     "url": "https://www.metaculus.com/questions/10043/ukraine-joins-eu-before-2030/"
@@ -4331,6 +4339,10 @@
       {
         "x": 1706162125984,
         "y": 0.35
+      },
+      {
+        "x": 1706248667618,
+        "y": 0.333
       }
     ],
     "url": "https://www.metaculus.com/questions/18862/ukraine-nato-membership-before-2035/"
@@ -6242,6 +6254,10 @@
       },
       {
         "x": 1706162125982,
+        "y": 0.02
+      },
+      {
+        "x": 1706248667615,
         "y": 0.02
       }
     ],
