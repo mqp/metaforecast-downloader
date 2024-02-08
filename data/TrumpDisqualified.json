@@ -571,6 +571,10 @@
       {
         "x": 1707285784417,
         "y": 0.15
+      },
+      {
+        "x": 1707372452425,
+        "y": 0.15
       }
     ],
     "url": "https://www.metaculus.com/questions/18716/trump-removed-or-blocked-from-primary-ballot/"
@@ -1206,6 +1210,10 @@
       },
       {
         "x": 1707285784417,
+        "y": 0.08
+      },
+      {
+        "x": 1707372452425,
         "y": 0.08
       }
     ],
@@ -2811,6 +2819,10 @@
       {
         "x": 1707285784416,
         "y": 0.9
+      },
+      {
+        "x": 1707372452410,
+        "y": 0.91
       }
     ],
     "url": "https://www.metaculus.com/questions/12215/trump-disqualification-unconstitutional/"
