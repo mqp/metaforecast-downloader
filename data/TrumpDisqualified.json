@@ -623,6 +623,10 @@
       {
         "x": 1708409351965,
         "y": 0.05
+      },
+      {
+        "x": 1708581974657,
+        "y": 0.05
       }
     ],
     "url": "https://www.metaculus.com/questions/18716/trump-removed-or-blocked-from-primary-ballot/"
@@ -1311,6 +1315,10 @@
       {
         "x": 1708409351964,
         "y": 0.06
+      },
+      {
+        "x": 1708581974657,
+        "y": 0.05
       }
     ],
     "url": "https://www.metaculus.com/questions/18606/trump-removed-or-blocked-from-general-ballot/"
@@ -2966,6 +2974,10 @@
       },
       {
         "x": 1708409351964,
+        "y": 0.95
+      },
+      {
+        "x": 1708581974656,
         "y": 0.95
       }
     ],
