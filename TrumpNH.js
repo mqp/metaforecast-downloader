@@ -2,9 +2,9 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
-{ id: "predictit-8071" },
-{ id: "smarkets-58020860" },
-{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
+//{ id: "predictit-8071" },
+//{ id: "smarkets-58020860" },
+//{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
 //{ id: "metaculus-21109" },
 ];
 

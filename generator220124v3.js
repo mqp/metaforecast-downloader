@@ -488,20 +488,20 @@ case 'IsraelHamasIran.json':
 //break;
 
 // TrumpCO
-case 'TrumpCO.json':
-  const idsForTrumpCO = ['manifold-z3rcPqJXZCVjaOxIpY6A'];
-  const latestProbabilitiesTrumpCO = idsForTrumpCO.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-  const lastDayProbabilitiesTrumpCO = idsForTrumpCO.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-  const medianLatestTrumpCO = calculateMedian(latestProbabilitiesTrumpCO);
-  const medianLastDayTrumpCO = calculateMedian(lastDayProbabilitiesTrumpCO);
-  const percentagePointDifferenceTrumpCO = Math.round((medianLatestTrumpCO - medianLastDayTrumpCO) * 100);
-  const medianLatestPercentTrumpCO = Math.round(medianLatestTrumpCO * 100);
-  headlineText = `Colorado: Trump ~${medianLatestPercentTrumpCO}% likely to appear on CO primary ballot`;
-  if (Math.abs(percentagePointDifferenceTrumpCO) >= 1) {
-    const direction = (percentagePointDifferenceTrumpCO > 0) ? 'up' : 'down';
-    headlineText += `, ${direction} ${percentagePointDifferenceTrumpCO >= 0 ? '+' : ''}${percentagePointDifferenceTrumpCO} points this month`;
-  }
-  break;
+//case 'TrumpCO.json':
+//  const idsForTrumpCO = ['manifold-z3rcPqJXZCVjaOxIpY6A'];
+//  const latestProbabilitiesTrumpCO = idsForTrumpCO.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+//  const lastDayProbabilitiesTrumpCO = idsForTrumpCO.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+//  const medianLatestTrumpCO = calculateMedian(latestProbabilitiesTrumpCO);
+//  const medianLastDayTrumpCO = calculateMedian(lastDayProbabilitiesTrumpCO);
+//  const percentagePointDifferenceTrumpCO = Math.round((medianLatestTrumpCO - medianLastDayTrumpCO) * 100);
+//  const medianLatestPercentTrumpCO = Math.round(medianLatestTrumpCO * 100);
+//  headlineText = `Colorado: Trump ~${medianLatestPercentTrumpCO}% likely to appear on CO primary ballot`;
+//  if (Math.abs(percentagePointDifferenceTrumpCO) >= 1) {
+//    const direction = (percentagePointDifferenceTrumpCO > 0) ? 'up' : 'down';
+//    headlineText += `, ${direction} ${percentagePointDifferenceTrumpCO >= 0 ? '+' : ''}${percentagePointDifferenceTrumpCO} points this month`;
+//  }
+//  break;
 
 // TrumpDisqualified
 case 'TrumpDisqualified.json':
@@ -518,18 +518,18 @@ case 'TrumpDisqualified.json':
     headlineText += `, ${direction} ${percentagePointDifferenceTrumpDisqualified >= 0 ? '+' : ''}${percentagePointDifferenceTrumpDisqualified} points this month`;
   }
 
-  const idsForSubTrumpDisqualified = ['metaculus-12215'];
-const latestProbabilitiesSubTrumpDisqualified = idsForSubTrumpDisqualified.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-const lastDayProbabilitiesSubTrumpDisqualified = idsForSubTrumpDisqualified.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-const medianLatestSubTrumpDisqualified = calculateMedian(latestProbabilitiesSubTrumpDisqualified);
-const medianLastDaySubTrumpDisqualified = calculateMedian(lastDayProbabilitiesSubTrumpDisqualified);
-const percentagePointDifferenceSubTrumpDisqualified = Math.round((medianLatestSubTrumpDisqualified - medianLastDaySubTrumpDisqualified) * 100);
-const medianLatestPercentSubTrumpDisqualified = Math.round(medianLatestSubTrumpDisqualified * 100);
-subHeadlineText = `If Trump disqualified from presidency, then it's ~${medianLatestPercentSubTrumpDisqualified}% likely to be ruled unconstitutional`;
-if (Math.abs(percentagePointDifferenceSubTrumpDisqualified) >= 1) {
-  const directionSub = (percentagePointDifferenceSubTrumpDisqualified > 0) ? 'up' : 'down';
-  subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubTrumpDisqualified >= 0 ? '+' : ''}${percentagePointDifferenceSubTrumpDisqualified} points this month`;
-}
+//  const idsForSubTrumpDisqualified = ['metaculus-12215'];
+//const latestProbabilitiesSubTrumpDisqualified = idsForSubTrumpDisqualified.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+//const lastDayProbabilitiesSubTrumpDisqualified = idsForSubTrumpDisqualified.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+//const medianLatestSubTrumpDisqualified = calculateMedian(latestProbabilitiesSubTrumpDisqualified);
+//const medianLastDaySubTrumpDisqualified = calculateMedian(lastDayProbabilitiesSubTrumpDisqualified);
+//const percentagePointDifferenceSubTrumpDisqualified = Math.round((medianLatestSubTrumpDisqualified - medianLastDaySubTrumpDisqualified) * 100);
+//const medianLatestPercentSubTrumpDisqualified = Math.round(medianLatestSubTrumpDisqualified * 100);
+//subHeadlineText = `If Trump disqualified from presidency, then it's ~${medianLatestPercentSubTrumpDisqualified}% likely to be ruled unconstitutional`;
+//if (Math.abs(percentagePointDifferenceSubTrumpDisqualified) >= 1) {
+//  const directionSub = (percentagePointDifferenceSubTrumpDisqualified > 0) ? 'up' : 'down';
+//  subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubTrumpDisqualified >= 0 ? '+' : ''}${percentagePointDifferenceSubTrumpDisqualified} points this month`;
+//}
 
 break;
 
@@ -563,20 +563,20 @@ if (Math.abs(percentagePointDifferenceSubTrumpJail) >= 1) {
 break;
 
 // TrumpNH
-case 'TrumpNH.json':
-  const idsForTrumpNH = ['predictit-8071', 'smarkets-58020860', 'manifold-6PRVVzCtifOxdVGJNA7a'];
-  const latestProbabilitiesTrumpNH = idsForTrumpNH.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-  const lastDayProbabilitiesTrumpNH = idsForTrumpNH.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-  const medianLatestTrumpNH = calculateMedian(latestProbabilitiesTrumpNH);
-  const medianLastDayTrumpNH = calculateMedian(lastDayProbabilitiesTrumpNH);
-  const percentagePointDifferenceTrumpNH = Math.round((medianLatestTrumpNH - medianLastDayTrumpNH) * 100);
-  const medianLatestPercentTrumpNH = Math.round(medianLatestTrumpNH * 100);
-  headlineText = `New Hampshire: Trump ~${medianLatestPercentTrumpNH}% likely to win NH primary`;
-  if (Math.abs(percentagePointDifferenceTrumpNH) >= 1) {
-    const direction = (percentagePointDifferenceTrumpNH > 0) ? 'up' : 'down';
-    headlineText += `, ${direction} ${percentagePointDifferenceTrumpNH >= 0 ? '+' : ''}${percentagePointDifferenceTrumpNH} points this month`;
-  }
-  break;
+//case 'TrumpNH.json':
+  //const idsForTrumpNH = ['smarkets-58020860', 'manifold-6PRVVzCtifOxdVGJNA7a'];
+  //const latestProbabilitiesTrumpNH = idsForTrumpNH.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+  //const lastDayProbabilitiesTrumpNH = idsForTrumpNH.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+  //const medianLatestTrumpNH = calculateMedian(latestProbabilitiesTrumpNH);
+  //const medianLastDayTrumpNH = calculateMedian(lastDayProbabilitiesTrumpNH);
+  //const percentagePointDifferenceTrumpNH = Math.round((medianLatestTrumpNH - medianLastDayTrumpNH) * 100);
+  //const medianLatestPercentTrumpNH = Math.round(medianLatestTrumpNH * 100);
+  //headlineText = `New Hampshire: Trump ~${medianLatestPercentTrumpNH}% likely to win NH primary`;
+  //if (Math.abs(percentagePointDifferenceTrumpNH) >= 1) {
+  //  const direction = (percentagePointDifferenceTrumpNH > 0) ? 'up' : 'down';
+  //  headlineText += `, ${direction} ${percentagePointDifferenceTrumpNH >= 0 ? '+' : ''}${percentagePointDifferenceTrumpNH} points this month`;
+  //}
+  //break;
 
   // TrumpNomination
 case 'TrumpNomination.json':

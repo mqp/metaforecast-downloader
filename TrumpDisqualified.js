@@ -4,7 +4,7 @@ const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
 { name: "Blocked from any state primary ballot?", id: "metaculus-18716" },
 { name: "Blocked from any state general ballot?", id: "metaculus-18606" },
-{ name: "If blocked from Presidency, then it's ruled unconstitutional?", id: "metaculus-12215" },
+//{ name: "If blocked from Presidency, then it's ruled unconstitutional?", id: "metaculus-12215" },
 
 
 ];
