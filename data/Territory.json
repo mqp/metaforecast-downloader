@@ -79,6 +79,14 @@
       {
         "x": 1710558639821,
         "y": 0.0497
+      },
+      {
+        "x": 1710645010273,
+        "y": 0.0497
+      },
+      {
+        "x": 1710731434226,
+        "y": 0.0497
       }
     ],
     "url": "https://www.gjopen.com/questions/3088-will-territory-in-any-ukrainian-oblast-that-borders-belarus-cease-to-be-under-ukrainian-control-before-1-may-2024-according-to-the-institute-for-the-study-of-war"
@@ -89,48 +97,8 @@
     "site": "GJ Open",
     "points": [
       {
-        "x": 1709694611907,
-        "y": 0.19
-      },
-      {
-        "x": 1709780982625,
-        "y": 0.1894
-      },
-      {
-        "x": 1709867393285,
-        "y": 0.1883
-      },
-      {
-        "x": 1709953837828,
-        "y": 0.1875
-      },
-      {
-        "x": 1710040235529,
-        "y": 0.1875
-      },
-      {
-        "x": 1710126601564,
-        "y": 0.19
-      },
-      {
-        "x": 1710213003048,
-        "y": 0.1878
-      },
-      {
-        "x": 1710299384744,
-        "y": 0.1873
-      },
-      {
-        "x": 1710385780672,
+        "x": 1710731434226,
         "y": 0.1833
-      },
-      {
-        "x": 1710472187970,
-        "y": 0.1844
-      },
-      {
-        "x": 1710558639821,
-        "y": 0.18
       }
     ],
     "url": "https://www.gjopen.com/questions/3121-what-percentage-of-ukrainian-territory-will-be-held-by-russia-as-of-july-2024-according-to-the-brookings-institution-s-ukraine-index"
@@ -658,6 +626,10 @@
       },
       {
         "x": 1710569427728,
+        "y": 0.38
+      },
+      {
+        "x": 1710655946596,
         "y": 0.38
       }
     ],
@@ -1919,6 +1891,14 @@
       {
         "x": 1710558639822,
         "y": 0.01
+      },
+      {
+        "x": 1710645010273,
+        "y": 0.01
+      },
+      {
+        "x": 1710731434226,
+        "y": 0.01
       }
     ],
     "url": "https://www.gjopen.com/questions/2859-when-will-all-military-forces-of-the-russian-federation-cease-to-be-in-the-luhansk-and-donetsk-oblasts-in-ukraine"
@@ -2607,6 +2587,10 @@
       {
         "x": 1710569427728,
         "y": 0.08
+      },
+      {
+        "x": 1710655946596,
+        "y": 0.08
       }
     ],
     "url": "https://www.metaculus.com/questions/18865/ukraine-takes-control-of-donetsk-and-luhansk/"
@@ -3067,6 +3051,14 @@
       {
         "x": 1710558762385,
         "y": 0.1872378724678057
+      },
+      {
+        "x": 1710645134183,
+        "y": 0.16751797167240245
+      },
+      {
+        "x": 1710731562738,
+        "y": 0.17304201812899314
       }
     ],
     "url": "https://manifold.markets/PS/will-the-front-line-in-ukraine-chan-8cf89160dcb2"
