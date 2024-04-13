@@ -831,6 +831,10 @@
       {
         "x": 1712902712992,
         "y": 0.11
+      },
+      {
+        "x": 1712988898656,
+        "y": 0.11
       }
     ],
     "url": "https://www.metaculus.com/questions/957/donald-trump-spends-time-in-jail-or-prison/"
@@ -3039,6 +3043,10 @@
       {
         "x": 1712902713003,
         "y": 0.25
+      },
+      {
+        "x": 1712988898664,
+        "y": 0.25
       }
     ],
     "url": "https://www.metaculus.com/questions/10832/donald-trump-jailed-by-2030/"
@@ -4034,6 +4042,10 @@
       },
       {
         "x": 1712902713004,
+        "y": 0.4
+      },
+      {
+        "x": 1712988898665,
         "y": 0.4
       }
     ],
