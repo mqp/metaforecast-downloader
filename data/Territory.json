@@ -195,6 +195,14 @@
       {
         "x": 1713064241571,
         "y": 0.024
+      },
+      {
+        "x": 1713150641361,
+        "y": 0.02
+      },
+      {
+        "x": 1713237050732,
+        "y": 0.02
       }
     ],
     "url": "https://www.gjopen.com/questions/3088-will-territory-in-any-ukrainian-oblast-that-borders-belarus-cease-to-be-under-ukrainian-control-before-1-may-2024-according-to-the-institute-for-the-study-of-war"
@@ -205,72 +213,8 @@
     "site": "GJ Open",
     "points": [
       {
-        "x": 1711681841429,
-        "y": 0.1746
-      },
-      {
-        "x": 1711768216358,
-        "y": 0.17
-      },
-      {
-        "x": 1711854642662,
-        "y": 0.17
-      },
-      {
-        "x": 1711941055573,
-        "y": 0.17
-      },
-      {
-        "x": 1712027423548,
-        "y": 0.1678
-      },
-      {
-        "x": 1712113799039,
-        "y": 0.17
-      },
-      {
-        "x": 1712200222568,
-        "y": 0.1678
-      },
-      {
-        "x": 1712286608473,
-        "y": 0.1684
-      },
-      {
-        "x": 1712373003009,
-        "y": 0.1678
-      },
-      {
-        "x": 1712459406652,
-        "y": 0.168
-      },
-      {
-        "x": 1712545814345,
-        "y": 0.168
-      },
-      {
-        "x": 1712632199712,
-        "y": 0.168
-      },
-      {
-        "x": 1712718618679,
-        "y": 0.17
-      },
-      {
-        "x": 1712805036344,
-        "y": 0.1675
-      },
-      {
-        "x": 1712891416633,
-        "y": 0.1624
-      },
-      {
-        "x": 1712977825856,
-        "y": 0.1609
-      },
-      {
-        "x": 1713064241571,
-        "y": 0.1595
+        "x": 1713237050732,
+        "y": 0.1539
       }
     ],
     "url": "https://www.gjopen.com/questions/3121-what-percentage-of-ukrainian-territory-will-be-held-by-russia-as-of-july-2024-according-to-the-brookings-institution-s-ukraine-index"
@@ -915,6 +859,10 @@
       {
         "x": 1713075620923,
         "y": 0.4
+      },
+      {
+        "x": 1713161971441,
+        "y": 0.4
       }
     ],
     "url": "https://www.metaculus.com/questions/19724/russia-expanded-territory-in-ukraine-in-2026/"
@@ -938,6 +886,14 @@
       },
       {
         "x": 1713064241571,
+        "y": 0.01
+      },
+      {
+        "x": 1713150641361,
+        "y": 0.01
+      },
+      {
+        "x": 1713237050733,
         "y": 0.01
       }
     ],
@@ -1743,6 +1699,10 @@
       {
         "x": 1713075620923,
         "y": 0.08
+      },
+      {
+        "x": 1713161971439,
+        "y": 0.05
       }
     ],
     "url": "https://www.metaculus.com/questions/18865/ukraine-takes-control-of-donetsk-and-luhansk/"
@@ -2319,6 +2279,14 @@
       {
         "x": 1713064389699,
         "y": 0.35052131493291494
+      },
+      {
+        "x": 1713150776491,
+        "y": 0.4000000000000002
+      },
+      {
+        "x": 1713237203573,
+        "y": 0.4000000000000001
       }
     ],
     "url": "https://manifold.markets/PS/will-the-front-line-in-ukraine-chan-8cf89160dcb2"
