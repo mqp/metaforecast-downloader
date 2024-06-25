@@ -2427,6 +2427,10 @@
       {
         "x": 1719207885203,
         "y": 0.3
+      },
+      {
+        "x": 1719296772502,
+        "y": 0.3
       }
     ],
     "url": "https://www.metaculus.com/questions/10949/russian-leader-disapproves-of-the-invasion/"
@@ -4174,6 +4178,10 @@
       },
       {
         "x": 1719207885204,
+        "y": 0.12
+      },
+      {
+        "x": 1719296772503,
         "y": 0.12
       }
     ],
@@ -6139,6 +6147,10 @@
       {
         "x": 1719207885203,
         "y": 0.02
+      },
+      {
+        "x": 1719296772502,
+        "y": 0.018
       }
     ],
     "url": "https://www.metaculus.com/questions/12568/russian-breakup-begins-by-2025/"
@@ -8471,6 +8483,10 @@
       {
         "x": 1719207885203,
         "y": 0.25
+      },
+      {
+        "x": 1719296772502,
+        "y": 0.25
       }
     ],
     "url": "https://www.metaculus.com/questions/11589/a-large-scale-conflict-within-russia-by-2030/"
@@ -10094,6 +10110,10 @@
       },
       {
         "x": 1719207885204,
+        "y": 0.33
+      },
+      {
+        "x": 1719296772503,
         "y": 0.33
       }
     ],
