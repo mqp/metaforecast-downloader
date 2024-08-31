@@ -3131,6 +3131,10 @@
       {
         "x": 1725000802501,
         "y": 0.1
+      },
+      {
+        "x": 1725087371593,
+        "y": 0.1
       }
     ],
     "url": "https://www.metaculus.com/questions/8636/war-between-russia-and-nato-countries/"
@@ -6091,6 +6095,10 @@
       {
         "x": 1725000802500,
         "y": 0.1
+      },
+      {
+        "x": 1725087371592,
+        "y": 0.1
       }
     ],
     "url": "https://www.metaculus.com/questions/7452/us-russia-war-before-2050/"
@@ -8882,6 +8890,10 @@
       },
       {
         "x": 1725000802502,
+        "y": 0.02
+      },
+      {
+        "x": 1725087371593,
         "y": 0.02
       }
     ],
