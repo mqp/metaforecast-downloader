@@ -39,4 +39,4 @@ function getPoint(id, historyItem) {
   }
 }
 
-fetchAll(markets, getPoint).then((data) => writeJSONOutput("Nuclear.json", data));
+fetchAll(markets, getPoint).then((data) => writeJSONOutput("Nuclear2.json", data));
