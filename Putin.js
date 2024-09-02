@@ -1,10 +1,13 @@
 import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
-{ name: "Putin stays in power in 2024", id: "manifold-Nc8DWWUyYm6CQp6PvOEv" },
-{ name: "Putin wins next election with >80% vote", id: "goodjudgmentopen-2959" },
-{ name: "Putin wins next election with >75% vote", id: "goodjudgment-f9e7328d1c" },
-{ name: "Putin declares martial law in 2024", id: "metaculus-17682" },
+{ name: "Putin stays in power in 2024?", id: "manifold-Nc8DWWUyYm6CQp6PvOEv" },
+//{ name: "Putin wins next election with >80% vote", id: "goodjudgmentopen-2959" },
+//{ name: "Putin wins next election with >75% vote", id: "goodjudgment-f9e7328d1c" },
+{ name: "Putin declares martial law in 2024?", id: "metaculus-17682" },
+//{ name: "Zelenskyy re-elected?", id: "metaculus-10807" },
+//{ name: "post-Putin Russia democratises", id: "metaculus-15098" },
+
   //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
 //  { id: "infer-1263" },
 //  { id: "metaculus-13930" },

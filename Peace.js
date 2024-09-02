@@ -3,10 +3,11 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 const markets = [
 //  { name: "Ceasefire in 2023?", id: "metaculus-13985" },
 //  { name: "Ceasefire in 2023?", id: "polymarket-0x30afc488" },
-  { name: "War ends by Jul 2024?", id: "goodjudgmentopen-2951" },
-  { name: "War ends by Oct 2024?", id: "goodjudgmentopen-3114" },
+//  { name: "War ends by Jul 2024?", id: "goodjudgmentopen-2951" },
+  { name: "Peace by Oct 2024?", id: "goodjudgmentopen-3114" },
   { name: "Peace talks in 2024?", id: "manifold-YYKCHy5ITvvCU00g8hEr" },
-  { name: "War ends in 2024?", id: "manifold-a01aHewEJNDOl4fIKaAU" },
+  { name: "Peace in 2024?", id: "manifold-a01aHewEJNDOl4fIKaAU" },
+  { name: "Peace or ceasefire in 2024?", id: "metaculus-20752" },
 //  { name: "War ends in 2023?", id: "manifold-IY4cZAXStA3cvcqCDJqR" },
 //  { name: "War ends?", id: "insight-224920" }
 ];

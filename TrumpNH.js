@@ -2,8 +2,13 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
 //  { name: "by Oct?", id: "goodjudgmentopen-2617" },
-//{ id: "predictit-8071" },
+{ name: "GOP wins Senate in 2024?", id: "smarkets-39918396" },
+{ name: "GOP wins Senate in 2024?", id: "betfair-1.225479090" },
+{ name: "GOP wins Senate in 2024?", id: "metaculus-7850" },
+{ name: "GOP wins Senate in 2024?", id: "goodjudgmentopen-3220" },
 //{ id: "smarkets-58020860" },
+{ name: "GOP wins House in 2024?", id: "metaculus-7849" },
+{ name: "GOP wins House in 2024?", id: "goodjudgmentopen-3219" },
 //{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
 //{ id: "metaculus-21109" },
 ];
@@ -11,12 +16,16 @@ const markets = [
 
 function getPoint(id, historyItem) {
   let targetOption;
-  if (id === "manifold-6PRVVzCtifOxdVGJNA7a") {
-    targetOption = "Yes";
-  } else if (id === "metaculus-21109") {
-    targetOption = "Yes";
+  if (id === "smarkets-39918396") {
+    targetOption = "Republican";
+  } else if (id === "betfair-1.225479090") {
+    targetOption = "Republican Control";
+  } else if (id === "goodjudgmentopen-3220") {
+    targetOption = "Republican Party";
+  } else if (id === "goodjudgmentopen-3219") {
+    targetOption = "Republican Party";
   } else {
-    targetOption = "Donald Trump";
+    targetOption = "Yes";
   }
 
   for (const option of historyItem.options) {

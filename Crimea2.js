@@ -1,8 +1,9 @@
 import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
-  { name: "Crimea land bridge cut in 2024?", id: "metaculus-20533" },
-  { name: "Crimea land bridge cut by Aug?", id: "goodjudgmentopen-3089" },
+//  { name: "Crimea land bridge cut in 2024?", id: "metaculus-20533" },
+  //{ name: "Crimea land bridge cut by 2026?", id: "manifold-66mtREH4OpGsbJlhO4gS" },
+  //{ name: "Crimea land bridge cut by Aug?", id: "goodjudgmentopen-3089" },
   // { name: "Crimea land bridge cut in 2023?", id: "metaculus-13531" },
   //  { name: "Crimea land bridge cut by Nov?", id: "polymarket-0xda2cef9f" },
   //  { name: "Crimea land bridge cut by Oct?", id: "insight-154445" },
