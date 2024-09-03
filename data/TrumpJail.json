@@ -1395,6 +1395,10 @@
       {
         "x": 1725173862668,
         "y": 0.11
+      },
+      {
+        "x": 1725260055337,
+        "y": 0.11
       }
     ],
     "url": "https://www.metaculus.com/questions/957/donald-trump-spends-time-in-jail-or-prison/"
@@ -4167,6 +4171,10 @@
       {
         "x": 1725173862675,
         "y": 0.12
+      },
+      {
+        "x": 1725260055340,
+        "y": 0.14
       }
     ],
     "url": "https://www.metaculus.com/questions/10832/donald-trump-jailed-by-2030/"
@@ -5607,6 +5615,10 @@
       {
         "x": 1725173862676,
         "y": 0.01
+      },
+      {
+        "x": 1725260055343,
+        "y": 0.01
       }
     ],
     "url": "https://www.metaculus.com/questions/18233/trump-conviction-odds/"
@@ -5616,6 +5628,7 @@
     "name": "Federal conviction by Nov 2024?",
     "site": "GJ Open",
     "points": [
+      null,
       null,
       null,
       null,

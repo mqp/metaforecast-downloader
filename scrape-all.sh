@@ -18,7 +18,6 @@ node IsraelHamasHezbollah.js
 node IsraelHamasIran.js
 node IsraelHamasIran2.js
 node IsraelHamasSaudi.js
-node TrumpDisqualified.js
-node TrumpJail.js
-node TrumpNomination.js
+node TrumpNH.js
 node TrumpPresident.js
+node TrumpJail.js

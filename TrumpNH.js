@@ -1,18 +1,17 @@
 import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
-//  { name: "by Oct?", id: "goodjudgmentopen-2617" },
+// { name: "by Oct?", id: "goodjudgmentopen-2617" },
+//{ id: "smarkets-58020860" },
+//{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
+//{ id: "metaculus-21109" },
 { name: "GOP wins Senate in 2024?", id: "smarkets-39918396" },
 { name: "GOP wins Senate in 2024?", id: "betfair-1.225479090" },
 { name: "GOP wins Senate in 2024?", id: "metaculus-7850" },
 { name: "GOP wins Senate in 2024?", id: "goodjudgmentopen-3220" },
-//{ id: "smarkets-58020860" },
 { name: "GOP wins House in 2024?", id: "metaculus-7849" },
 { name: "GOP wins House in 2024?", id: "goodjudgmentopen-3219" },
-//{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
-//{ id: "metaculus-21109" },
 ];
-
 
 function getPoint(id, historyItem) {
   let targetOption;
