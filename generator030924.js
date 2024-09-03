@@ -583,7 +583,7 @@ break;
 
  TrumpNH
 case 'TrumpNH.json':
-  const idsForTrumpNH = ['smarkets-39918396', 'betfair-1.225479090','metaculus-7850','goodjudgmentopen-3220'];
+  const idsForTrumpNH = ['smarkets-39918396','metaculus-7850','goodjudgmentopen-3220'];
   const latestProbabilitiesTrumpNH = idsForTrumpNH.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
   const lastDayProbabilitiesTrumpNH = idsForTrumpNH.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
   const medianLatestTrumpNH = calculateMedian(latestProbabilitiesTrumpNH);
@@ -596,7 +596,7 @@ case 'TrumpNH.json':
     headlineText += `, ${direction} ${percentagePointDifferenceTrumpNH >= 0 ? '+' : ''}${percentagePointDifferenceTrumpNH} points this month`;
   }
 
-  const idsForSubTrumpNH = ['metaculus-7849, goodjudgmentopen-3219'];
+  const idsForSubTrumpNH = ['metaculus-7849', 'goodjudgmentopen-3219'];
 const latestProbabilitiesSubTrumpNH = idsForSubTrumpNH.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
 const lastDayProbabilitiesSubTrumpNH = idsForSubTrumpNH.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
 const medianLatestSubTrumpNH = calculateMedian(latestProbabilitiesSubTrumpNH);

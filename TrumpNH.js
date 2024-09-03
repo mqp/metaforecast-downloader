@@ -5,8 +5,8 @@ const markets = [
 //{ id: "smarkets-58020860" },
 //{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
 //{ id: "metaculus-21109" },
-{ name: "GOP wins Senate in 2024?", id: "smarkets-39918396" },
 //{ name: "GOP wins Senate in 2024?", id: "betfair-1.225479090" },
+{ name: "GOP wins Senate in 2024?", id: "smarkets-39918396" },
 { name: "GOP wins Senate in 2024?", id: "metaculus-7850" },
 { name: "GOP wins Senate in 2024?", id: "goodjudgmentopen-3220" },
 { name: "GOP wins House in 2024?", id: "metaculus-7849" },
@@ -17,8 +17,6 @@ function getPoint(id, historyItem) {
   let targetOption;
   if (id === "smarkets-39918396") {
     targetOption = "Republican";
-  } else if (id === "betfair-1.225479090") {
-    targetOption = "Republican Control";
   } else if (id === "goodjudgmentopen-3220") {
     targetOption = "Republican Party";
   } else if (id === "goodjudgmentopen-3219") {
