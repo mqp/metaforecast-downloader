@@ -6,7 +6,7 @@ const markets = [
 //{ id: "manifold-6PRVVzCtifOxdVGJNA7a" },
 //{ id: "metaculus-21109" },
 { name: "GOP wins Senate in 2024?", id: "smarkets-39918396" },
-{ name: "GOP wins Senate in 2024?", id: "betfair-1.225479090" },
+//{ name: "GOP wins Senate in 2024?", id: "betfair-1.225479090" },
 { name: "GOP wins Senate in 2024?", id: "metaculus-7850" },
 { name: "GOP wins Senate in 2024?", id: "goodjudgmentopen-3220" },
 { name: "GOP wins House in 2024?", id: "metaculus-7849" },
