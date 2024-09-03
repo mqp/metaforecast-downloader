@@ -12,7 +12,7 @@ const markets = [
 
 function getPoint(id, historyItem) {
   let targetOption;
-  if (id === "goodjudgmentopen-3183") {
+  if (id === "goodjudgmentopen-3398") {
     targetOption = "Yes, federal only";
   } else if (id === "goodjudgmentopen-2859") {
     targetOption = "Between 1 January 2024 and 30 June 2024";
