@@ -154,6 +154,10 @@
       {
         "x": 1725260055348,
         "y": 0.03
+      },
+      {
+        "x": 1725346454737,
+        "y": 0.03
       }
     ],
     "url": "https://www.metaculus.com/questions/25749/russia-controls-chasiv-yar-on-oct-1-2024/"
@@ -169,6 +173,10 @@
       },
       {
         "x": 1725246708637,
+        "y": 0.02
+      },
+      {
+        "x": 1725333115874,
         "y": 0.02
       }
     ],
@@ -1374,6 +1382,10 @@
       {
         "x": 1725260055346,
         "y": 0.25
+      },
+      {
+        "x": 1725346454737,
+        "y": 0.25
       }
     ],
     "url": "https://www.metaculus.com/questions/19724/russia-expanded-territory-in-ukraine-in-2026/"
@@ -1431,6 +1443,10 @@
       {
         "x": 1725260055362,
         "y": 0.291
+      },
+      {
+        "x": 1725346454738,
+        "y": 0.291
       }
     ],
     "url": "https://www.metaculus.com/questions/27191/ukraine-withdraws-from-kursk-before-dec-2024/"
@@ -1479,6 +1495,10 @@
       {
         "x": 1725246708636,
         "y": 0.40480000000000005
+      },
+      {
+        "x": 1725333115873,
+        "y": 0.37
       }
     ],
     "url": "https://www.gjopen.com/questions/3658-when-will-ukrainian-regular-ground-armed-forces-cease-to-be-in-the-internationally-recognized-territory-of-russia"
@@ -2361,6 +2381,10 @@
       },
       {
         "x": 1725260055348,
+        "y": 0.01
+      },
+      {
+        "x": 1725346454737,
         "y": 0.01
       }
     ],
@@ -3726,6 +3750,10 @@
       {
         "x": 1725260055346,
         "y": 0.04
+      },
+      {
+        "x": 1725346454737,
+        "y": 0.04
       }
     ],
     "url": "https://www.metaculus.com/questions/18865/ukraine-takes-control-of-donetsk-and-luhansk/"
@@ -4838,6 +4866,10 @@
       {
         "x": 1725246762469,
         "y": 0.6053156092180785
+      },
+      {
+        "x": 1725333168502,
+        "y": 0.58
       }
     ],
     "url": "https://manifold.markets/PS/will-the-front-line-in-ukraine-chan-8cf89160dcb2"
