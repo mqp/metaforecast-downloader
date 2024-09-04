@@ -2,7 +2,7 @@ import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
 { name: "Iran gets nukes by 2030?", id: "metaculus-5253" },
-{ name: "China ≥1k nukes by 2030?", id: "metaculus-19554" },
+{ name: "China ≥1k nukes by 2030?", id: "metaculus-8662" },
 { name: "New nuclear state by 2030?", id: "metaculus-15537" },
 { name: "Non-state actor gets nukes by 2030?", id: "metaculus-8614" },
 { name: "Major nuclear accident by 2030?", id: "metaculus-6378" },
