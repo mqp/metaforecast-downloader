@@ -6,7 +6,7 @@ const markets = [
   // { name: "Rus gains new territory?", id: "metaculus-10745" },
 //  { name: "UKR retakes DNR/LNR by Jul 2024?", id: "goodjudgmentopen-2859" },
   // { name: "Ukr retakes DNR/LNR?", id: "metaculus-10738" },
-  // { name: "Rus gains new territory by Oct?", id: "insight-146589" }
+  // { name: "Rus gains new territory by Oct?", id: "insight-146589" },
 
   { name: "RUS gains Chasiv Yar by Oct 2024?", id: "metaculus-25749" },
   { name: "RUS gains Kharkiv by Nov 2024?", id: "goodjudgmentopen-3477" },
@@ -18,8 +18,6 @@ const markets = [
   { name: "UKR controls DNR/LNR by 2030?", id: "metaculus-18865" },
   
   { name: "Frontline changes in 2024?", id: "manifold-Cjc9jjkQvT0hBWFGoaN7" },
-
-
 ];
 
 //function getPoint(id, historyItem) {
