@@ -2,6 +2,7 @@
 
 node Crimea.js
 node Escalation.js
+node Escalation2.js
 node Kerch.js
 node Peace.js
 node Putin.js

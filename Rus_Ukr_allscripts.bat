@@ -3,6 +3,7 @@ cd C:\Users\marci\metaforecast-downloader
 node Crimea.js
 node Crimea2.js
 node Escalation.js
+node Escalation2.js
 node Kerch.js
 node Nuclear.js
 node Nuclear2.js

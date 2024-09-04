@@ -102,20 +102,35 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
             }
          
          //sub-Escalation
-            const idsForSubEscalation = ['metaculus-7452'];
-            const latestProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-            const lastDayProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-            const medianLatestSubEscalation = calculateMedian(latestProbabilitiesSubEscalation);
-            const medianLastDaySubEscalation = calculateMedian(lastDayProbabilitiesSubEscalation);
-            const percentagePointDifferenceSubEscalation = Math.round((medianLatestSubEscalation - medianLastDaySubEscalation) * 100);
-            const medianLatestPercentSubEscalation = Math.round(medianLatestSubEscalation * 100);
-            subHeadlineText = `Russia-US war ~${medianLatestPercentSubEscalation}% likely by 2050`;
-            if (Math.abs(percentagePointDifferenceSubEscalation) >= 1) {
-              const directionSub = (percentagePointDifferenceSubEscalation > 0) ? 'up' : 'down';
-              subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubEscalation >= 0 ? '+' : ''}${percentagePointDifferenceSubEscalation} points this month`;
-            }
+        //    const idsForSubEscalation = ['metaculus-7452'];
+        //    const latestProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+        //    const lastDayProbabilitiesSubEscalation = idsForSubEscalation.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+        //    const medianLatestSubEscalation = calculateMedian(latestProbabilitiesSubEscalation);
+        //    const medianLastDaySubEscalation = calculateMedian(lastDayProbabilitiesSubEscalation);
+        //    const percentagePointDifferenceSubEscalation = Math.round((medianLatestSubEscalation - medianLastDaySubEscalation) * 100);
+        //    const medianLatestPercentSubEscalation = Math.round(medianLatestSubEscalation * 100);
+        //    subHeadlineText = `Russia-US war ~${medianLatestPercentSubEscalation}% likely by 2050`;
+        //    if (Math.abs(percentagePointDifferenceSubEscalation) >= 1) {
+        //      const directionSub = (percentagePointDifferenceSubEscalation > 0) ? 'up' : 'down';
+        //      subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubEscalation >= 0 ? '+' : ''}${percentagePointDifferenceSubEscalation} points this month`;
+        //    }
             break;
          
+      //Escalation
+      case 'Escalation2.json':
+        const escalationId2 = ['metaculus-7452'];
+        const latestProbabilityEscalation2 = dataMap[escalationId2]?.latestProbability || 0;
+        const lastDayProbabilityEscalation2 = dataMap[escalationId2]?.lastDayProbability || 0;
+        const percentagePointDifferenceEscalation2 = Math.round((latestProbabilityEscalation2 - lastDayProbabilityEscalation2) * 100);
+        const latestPercentEscalation2 = Math.round(latestProbabilityEscalation2 * 100);
+        headlineText = `Russia-US war ${latestPercentEscalation2}% likely by 2050`;
+        if (Math.abs(percentagePointDifferenceEscalation2) >= 1) {
+          const direction = (percentagePointDifferenceEscalation2 > 0) ? 'up' : 'down';
+          headlineText += `, ${direction} ${percentagePointDifferenceEscalation2 >= 0 ? '+' : ''}${percentagePointDifferenceEscalation2} points this month`;
+        }
+            break;
+
+
       //Kerch
           case 'Kerch.json':
             const idsForKerch = ['metaculus-10043'];

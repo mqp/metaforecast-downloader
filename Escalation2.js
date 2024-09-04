@@ -8,12 +8,12 @@ const markets = [
 // { name: "Ukr joins EU?", id: "metaculus-10081" },
 // { name: "Rus-US clash by Dec 16?", id: "goodjudgmentopen-2913" },
 
-{ name: "RUS-NATO lethal confrontation by Jan 2025?", id: "goodjudgmentopen-3687" },
-{ name: "RUS-NATO direct conflict by 2027?", id: "metaculus-21548" },
-{ name: "NATO troops openly in UKR by 2027?", id: "metaculus-21761" },
-//{ name: "RUS-NATO excl. US war by 2035?", id: "metaculus-8636" },
-//{ name: "RUS-US war by 2050?", id: "metaculus-7452" },
-//{ name: "RUS annxes part of Baltics by 2035?", id: "metaculus-8786" },
+//{ name: "RUS-NATO lethal confrontation by Jan 2025?", id: "goodjudgmentopen-3687" },
+//{ name: "RUS-NATO direct conflict by 2027?", id: "metaculus-21548" },
+//{ name: "NATO troops openly in UKR by 2027?", id: "metaculus-21761" },
+{ name: "RUS-NATO excl. US war by 2035?", id: "metaculus-8636" },
+{ name: "RUS-US war by 2050?", id: "metaculus-7452" },
+{ name: "RUS annxes part of Baltics by 2035?", id: "metaculus-8786" },
 ];
 
 //function getPoint(id, historyItem) {
@@ -43,5 +43,5 @@ fetchAll(markets, getPoint).then((data) => {
     ...market,
     points: market.points.filter(point => point !== null)
   }));
-  writeJSONOutput("Escalation.json", cleanedData);
+  writeJSONOutput("Escalation2.json", cleanedData);
 });
