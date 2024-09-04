@@ -74,10 +74,6 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
     const percentagePointDifferencePoints = Math.round(percentagePointDifference * 100);
     switch (dataFileName) {
 
-// >>> >>> >>> *** RUSSIA UKRAINE *** <<< <<< <<<
-// >>> >>> >>> *** RUSSIA UKRAINE *** <<< <<< <<<
-// >>> >>> >>> *** RUSSIA UKRAINE *** <<< <<< <<<
-
     //Crimea     
       case 'Crimea.json':
         const idsForCrimea = ['metaculus-20533', 'manifold-el2oeAPlwm4u0LBKLQXx', 'manifold-p3UsYkHmZ6Xj09ybEo08'];
@@ -136,7 +132,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
             }
          
          //sub-Kerch
-            const kerchSubId = 'metaculus-18862';
+            const kerchSubId = ['metaculus-18862'];
             const latestProbabilityKerchSub = dataMap[kerchSubId]?.latestProbability || 0;
             const lastDayProbabilityKerchSub = dataMap[kerchSubId]?.lastDayProbability || 0;
             const percentagePointDifferenceKerchSub = Math.round((latestProbabilityKerchSub - lastDayProbabilityKerchSub) * 100);
@@ -150,7 +146,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
          
      //Nuclear
      case 'Nuclear.json':
-  const idsForNuclear = ['metaculus-19554','metaculus-27538','metaculus-20768'];
+  const idsForNuclear = ['metaculus-19554', 'metaculus-27538', 'metaculus-20768'];
   const highestProbNuclear = Math.max(...idsForNuclear.map(id => dataMap[id]?.latestProbability || 0));
   const highestLastDayProbNuclear = Math.max(...idsForNuclear.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
   const highestProbPercentNuclear = Math.round(highestProbNuclear * 100);
@@ -164,19 +160,6 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
        
       // Peace
 case 'Peace.json':
-  //const idsForPeaceHeader = ['metaculus-13985', 'polymarket-0x30afc488'];
-  //const latestProbabilitiesPeaceHeader = idsForPeaceHeader.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-  //const lastDayProbabilitiesPeaceHeader = idsForPeaceHeader.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-  //const medianLatestPeaceHeader = calculateMedian(latestProbabilitiesPeaceHeader);
-  //const medianLastDayPeaceHeader = calculateMedian(lastDayProbabilitiesPeaceHeader);
-  //const percentagePointDifferencePeaceHeader = Math.round((medianLatestPeaceHeader - medianLastDayPeaceHeader) * 100);
-  //const medianLatestPercentPeaceHeader = Math.round(medianLatestPeaceHeader * 100);
-  //headlineText = `Russia-Ukraine ceasefire: ~${medianLatestPercentPeaceHeader}% chance`;
-  //if (Math.abs(percentagePointDifferencePeaceHeader) >= 1) {
-  //  const direction = (percentagePointDifferencePeaceHeader > 0) ? 'up' : 'down';
-  //  headlineText += `, ${direction} ${percentagePointDifferencePeaceHeader >= 0 ? '+' : ''}${percentagePointDifferencePeaceHeader} points this month`;
-  //}
-
   const idsForPeace2 = ['goodjudgmentopen-3114', 'manifold-a01aHewEJNDOl4fIKaAU'];
   const highestProbPeace2 = Math.max(...idsForPeace2.map(id => dataMap[id]?.latestProbability || 0));
   const highestLastDayProbPeace2 = Math.max(...idsForPeace2.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
@@ -280,64 +263,9 @@ break;
         headlineText = `Post-Putin Russia: next leader ~${medianLatestPercentWagner}% likely to disapprove of Ukraine invasion, ~${medianLatestPercentDemocratization}% chance of democratisation`;
         break;
 
-        // Threads
-case 'Threads.json':
-  const idsForThreads = ['metaculus-14259', 'manifold-qqFkvYHzzpTuonxnBWpN'];
-  const latestProbabilitiesThreads = idsForThreads.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-  const lastDayProbabilitiesThreads = idsForThreads.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-  const medianLatestThreads = calculateMedian(latestProbabilitiesThreads);
-  const medianLastDayThreads = calculateMedian(lastDayProbabilitiesThreads);
-  const percentagePointDifferenceThreads = Math.round((medianLatestThreads - medianLastDayThreads) * 100);
-  const medianLatestPercentThreads = Math.round(medianLatestThreads * 100);
-  headlineText = `Twitter user growth: ~${medianLatestPercentThreads}% likely`;
-  if (Math.abs(percentagePointDifferenceThreads) >= 1) {
-    const direction = (percentagePointDifferenceThreads > 0) ? 'up' : 'down';
-    headlineText += `, ${direction} ${percentagePointDifferenceThreads >= 0 ? '+' : ''}${percentagePointDifferenceThreads} points this month`;
-  }
-
-  // Sub-Threads
-  const xxProb = Math.round(dataMap['manifold-FxpNqBVG6NIvmZFVqG1P'].latestProbability * 100);
-  const yyProb = Math.round(dataMap['manifold-JxcpJTGSurSdSMlFxYhL'].latestProbability * 100);
-  subHeadlineText = `Threads overtakes Twitter: ${xxProb}% chance by 2024, ${yyProb}% by 2025`;
-  break;
-
-  // Threads2
-case 'Threads2.json':
-  const idsForThreads2 = ['goodjudgmentopen-2631', 'polymarket-0x950eb697'];
-  const latestProbabilitiesThreads2 = idsForThreads2.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-  const lastDayProbabilitiesThreads2 = idsForThreads2.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-  const medianLatestThreads2 = calculateMedian(latestProbabilitiesThreads2);
-  const medianLastDayThreads2 = calculateMedian(lastDayProbabilitiesThreads2);
-  const percentagePointDifferenceThreads2 = Math.round((medianLatestThreads2 - medianLastDayThreads2) * 100);
-  const medianLatestPercentThreads2 = Math.round(medianLatestThreads2 * 100);
-  headlineText = `Twitter bankruptcy: ~${medianLatestPercentThreads2}% chance`;
-  if (Math.abs(percentagePointDifferenceThreads2) >= 1) {
-    const direction = (percentagePointDifferenceThreads2 > 0) ? 'up' : 'down';
-    headlineText += `, ${direction} ${percentagePointDifferenceThreads2 >= 0 ? '+' : ''}${percentagePointDifferenceThreads2} points this month`;
-  }
-
-  // Sub-Threads2
-  const idsForSubThreads2 = ['metaculus-14257', 'manifold-SttdxBP4Edxqzq0ScDCH'];
-  const latestProbabilitiesSubThreads2 = idsForSubThreads2.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-  const lastDayProbabilitiesSubThreads2 = idsForSubThreads2.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-  const medianLatestSubThreads2 = calculateMedian(latestProbabilitiesSubThreads2);
-  const medianLastDaySubThreads2 = calculateMedian(lastDayProbabilitiesSubThreads2);
-  const percentagePointDifferenceSubThreads2 = Math.round((medianLatestSubThreads2 - medianLastDaySubThreads2) * 100);
-  const medianLatestPercentSubThreads2 = Math.round(medianLatestSubThreads2 * 100);
-  subHeadlineText = `Elon Musk: ~${medianLatestPercentSubThreads2}% likely to stay owner of Twitter`;
-  if (Math.abs(percentagePointDifferenceSubThreads2) >= 1) {
-    const directionSub = (percentagePointDifferenceSubThreads2 > 0) ? 'up' : 'down';
-    subHeadlineText += `, ${directionSub} ${percentagePointDifferenceSubThreads2 >= 0 ? '+' : ''}${percentagePointDifferenceSubThreads2} points this month`;
-  }
-  break;
-
-// >>> >>> >>> *** ISRAEL HAMAS *** <<< <<< <<<
-// >>> >>> >>> *** ISRAEL HAMAS *** <<< <<< <<<
-// >>> >>> >>> *** ISRAEL HAMAS *** <<< <<< <<<
-
 // IsraelHamasCeasefire
 case 'IsraelHamasCeasefire.json':
-  const idsForHamasCeasefire = ['manifold-5PBiCM7mofSHR55eoXkP','metaculus-26084','goodjudgmentopen-3572',];
+  const idsForHamasCeasefire = ['manifold-5PBiCM7mofSHR55eoXkP', 'metaculus-26084', 'goodjudgmentopen-3572'];
   const latestProbabilitiesHamasCeasefire = idsForHamasCeasefire.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
   const lastDayProbabilitiesHamasCeasefire = idsForHamasCeasefire.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
   const medianLatestHamasCeasefire = calculateMedian(latestProbabilitiesHamasCeasefire);
@@ -381,7 +309,6 @@ case 'IsraelHamasGazaControl.json':
 break;
 
 // IsraelHamasHezbollah
-// Hezbollah: up to XX% risk of conflict with Israel
 case 'IsraelHamasHezbollah.json':
   const idsForHezbollah = ['metaculus-25846'];
   const highestProb2 = Math.max(...idsForHezbollah.map(id => dataMap[id]?.latestProbability || 0));
@@ -396,7 +323,6 @@ case 'IsraelHamasHezbollah.json':
   break;
 
 // IsraelHamasSaudi
-// Israel-Saudi: XX% chance of establishing relations, up +YY points this month
 case 'IsraelHamasSaudi.json':
   const idsForIsraelHamasSaudi = ['metaculus-17990', 'manifold-7LxcLPJKi3jA86XghgQE'];
   const latestProbabilitiesIsraelHamasSaudi = idsForIsraelHamasSaudi.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
@@ -413,7 +339,6 @@ case 'IsraelHamasSaudi.json':
   break;
 
 // IsraelHamasIran
-// Iran: up to XX% risk of conflict with Israel
 case 'IsraelHamasIran.json':
   const idsForIsraelHamasIran = ['manifold-IXPA4v7waElX2BUZ6TzF', 'metaculus-14899'];
 //  const highestProb3 = Math.max(...idsForIsraelHamasIran.map(id => dataMap[id]?.latestProbability || 0));
@@ -439,25 +364,6 @@ case 'IsraelHamasIran.json':
   }
   break;
 
-// IsraelHamasIran2
-// Iran: nuclear weapons
-// case 'IsraelHamasIran2.json':
-  //headlineText = `Iran: nuclear weapons`;
-
-//  const idsForIsraelHamasIranNukes = ['metaculus-5253'];
-//  const latestProbabilitiesIsraelHamasIranNukes = idsForIsraelHamasIranNukes.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-//  const lastDayProbabilitiesIsraelHamasIranNukes = idsForIsraelHamasIranNukes.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-//  const medianLatestIsraelHamasIranNukes = calculateMedian(latestProbabilitiesIsraelHamasIranNukes);
-//  const medianLastDayIsraelHamasIranNukes = calculateMedian(lastDayProbabilitiesIsraelHamasIranNukes);
-//  const percentagePointDifferenceIsraelHamasIranNukes = Math.round((medianLatestIsraelHamasIranNukes - medianLastDayIsraelHamasIranNukes) * 100);
-//  const medianLatestPercentIsraelHamasIranNukes = Math.round(medianLatestIsraelHamasIranNukes * 100);
-//  headlineText = `Iran ~${medianLatestPercentIsraelHamasIranNukes}% likely to have nuclear weapons by 2030`;
-//  if (Math.abs(percentagePointDifferenceIsraelHamasIranNukes) >= 1) {
-//    const direction = (percentagePointDifferenceIsraelHamasIranNukes > 0) ? 'up' : 'down';
-//    headlineText += `, ${direction} ${percentagePointDifferenceIsraelHamasIranNukes >= 0 ? '+' : ''}${percentagePointDifferenceIsraelHamasIranNukes} points this month`;
-//  }
-//break;
-
 // IsraelHamasLeadership
  case 'IsraelHamasLeadership.json':
   const idsForIsraelHamasLeadership = ['metaculus-20753'];
@@ -473,11 +379,6 @@ case 'IsraelHamasIran.json':
     headlineText += `, ${direction} ${percentagePointDifferenceIsraelHamasLeadership >= 0 ? '+' : ''}${percentagePointDifferenceIsraelHamasLeadership} points this month`;
   }
 break;
-
-
-// >>> >>> >>> *** TRUMP *** <<< <<< <<<
-// >>> >>> >>> *** TRUMP *** <<< <<< <<<
-// >>> >>> >>> *** TRUMP *** <<< <<< <<<
 
 // TrumpJail
 case 'TrumpJail.json':
