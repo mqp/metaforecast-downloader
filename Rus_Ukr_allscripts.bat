@@ -10,6 +10,7 @@ node Nuclear2.js
 node Peace.js
 node Putin.js
 node Territory.js
+node Territory2.js
 node Wagner.js
 echo All scripts have been executed.
 pause

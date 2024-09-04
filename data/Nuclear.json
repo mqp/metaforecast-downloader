@@ -4,8 +4,6 @@
     "name": "Israel uses nuke in combat by Oct 2024?",
     "site": "Metaculus",
     "points": [
-      null,
-      null,
       {
         "x": 1698558884660,
         "y": 0.01
@@ -1229,6 +1227,10 @@
       {
         "x": 1725346454737,
         "y": 0.001
+      },
+      {
+        "x": 1725432886485,
+        "y": 0.001
       }
     ],
     "url": "https://www.metaculus.com/questions/19554/israel-using-nuclear-weapons/"
@@ -1238,7 +1240,6 @@
     "name": "Russia uses nuke vs Ukraine by Oct 2024?",
     "site": "Metaculus",
     "points": [
-      null,
       {
         "x": 1724482272664,
         "y": 0.07
@@ -1282,6 +1283,10 @@
       {
         "x": 1725346454738,
         "y": 0.07
+      },
+      {
+        "x": 1725432886486,
+        "y": 0.07
       }
     ],
     "url": "https://www.metaculus.com/questions/27538/will-russia-detonate-a-nuclear-weapon-in-ukraine-or-ukrainian-held-territory-before-october-1-2024/"
@@ -1291,37 +1296,6 @@
     "name": "Nuke kills ≥10 people in 2024?",
     "site": "Metaculus",
     "points": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       {
         "x": 1706982726090,
         "y": 0.02
@@ -2169,6 +2143,10 @@
       {
         "x": 1725346454737,
         "y": 0.01
+      },
+      {
+        "x": 1725432886485,
+        "y": 0.01
       }
     ],
     "url": "https://www.metaculus.com/questions/20768/10-deaths-due-to-nuclear-detonation-in-2024/"
@@ -2178,37 +2156,6 @@
     "name": "Ukraine plant radiation incident in 2024?",
     "site": "Metaculus",
     "points": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       {
         "x": 1706982726090,
         "y": 0.079
@@ -3056,6 +3003,10 @@
       {
         "x": 1725346454737,
         "y": 0.02
+      },
+      {
+        "x": 1725432886485,
+        "y": 0.02
       }
     ],
     "url": "https://www.metaculus.com/questions/20790/radiation-incident-in-ukraine-before-2025/"
@@ -3065,7 +3016,6 @@
     "name": "Ukraine starts nuke program by 2026?",
     "site": "Metaculus",
     "points": [
-      null,
       {
         "x": 1693806392375,
         "y": 0.01
@@ -4508,6 +4458,10 @@
       },
       {
         "x": 1725346454736,
+        "y": 0.01
+      },
+      {
+        "x": 1725432886484,
         "y": 0.01
       }
     ],

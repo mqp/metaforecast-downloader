@@ -7,6 +7,7 @@ node Kerch.js
 node Peace.js
 node Putin.js
 node Territory.js
+node Territory2.js
 node Wagner.js
 node Nuclear.js
 node Nuclear2.js

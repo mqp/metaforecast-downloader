@@ -11,9 +11,6 @@ const markets = [
 { name: "RUS-NATO lethal confrontation by Jan 2025?", id: "goodjudgmentopen-3687" },
 { name: "RUS-NATO direct conflict by 2027?", id: "metaculus-21548" },
 { name: "NATO troops openly in UKR by 2027?", id: "metaculus-21761" },
-//{ name: "RUS-NATO excl. US war by 2035?", id: "metaculus-8636" },
-//{ name: "RUS-US war by 2050?", id: "metaculus-7452" },
-//{ name: "RUS annxes part of Baltics by 2035?", id: "metaculus-8786" },
 ];
 
 //function getPoint(id, historyItem) {

@@ -81,7 +81,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         const highestLastDayProb = Math.max(...idsForCrimea.map(id => dataMap[id]?.lastDayProbability).filter(x => !isNaN(x)));
         const highestProbPercent = Math.round(highestProb * 100);
         const highestProbPointDifference = Math.round((highestProb - highestLastDayProb) * 100);
-        headlineText = `Crimea: up to ${highestProbPercent}% chance of Ukraine retaking Crimean territory by 2027`;
+        headlineText = `Crimea: up to ~${highestProbPercent}% chance of Ukraine retaking Crimean territory by 2027`;
         if (Math.abs(highestProbPointDifference) >= 1) {
           const direction = (highestProbPointDifference > 0) ? 'up' : 'down';
           headlineText += `, ${direction} ${highestProbPointDifference >= 0 ? '+' : ''}${highestProbPointDifference} points this month`;
@@ -95,7 +95,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
             const lastDayProbabilityEscalation = dataMap[escalationId]?.lastDayProbability || 0;
             const percentagePointDifferenceEscalation = Math.round((latestProbabilityEscalation - lastDayProbabilityEscalation) * 100);
             const latestPercentEscalation = Math.round(latestProbabilityEscalation * 100);
-            headlineText = `Escalation: ${latestPercentEscalation}% risk of Russia-NATO direct conflict by 2027`;
+            headlineText = `Escalation: ~${latestPercentEscalation}% risk of Russia-NATO direct conflict by 2027`;
             if (Math.abs(percentagePointDifferenceEscalation) >= 1) {
               const direction = (percentagePointDifferenceEscalation > 0) ? 'up' : 'down';
               headlineText += `, ${direction} ${percentagePointDifferenceEscalation >= 0 ? '+' : ''}${percentagePointDifferenceEscalation} points this month`;
@@ -109,7 +109,7 @@ function createHeadline(container, medianLatest, percentagePointDifference, data
         const lastDayProbabilityEscalation2 = dataMap[escalationId2]?.lastDayProbability || 0;
         const percentagePointDifferenceEscalation2 = Math.round((latestProbabilityEscalation2 - lastDayProbabilityEscalation2) * 100);
         const latestPercentEscalation2 = Math.round(latestProbabilityEscalation2 * 100);
-        headlineText = `Russia-US war ${latestPercentEscalation2}% likely by 2050`;
+        headlineText = `Russia-US war ~${latestPercentEscalation2}% likely by 2050`;
         if (Math.abs(percentagePointDifferenceEscalation2) >= 1) {
           const direction = (percentagePointDifferenceEscalation2 > 0) ? 'up' : 'down';
           headlineText += `, ${direction} ${percentagePointDifferenceEscalation2 >= 0 ? '+' : ''}${percentagePointDifferenceEscalation2} points this month`;
@@ -231,19 +231,19 @@ break;
         headlineText += `, ${direction} ${percentagePointDifferenceTerritoryHeadline >= 0 ? '+' : ''}${percentagePointDifferenceTerritoryHeadline} points this month`;
       }
       
-      //sub-Territory
-      const idsForTerritorySubHeadline = ['goodjudgmentopen-3658'];
-      const latestProbabilitiesTerritorySubHeadline = idsForTerritorySubHeadline.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
-      const lastDayProbabilitiesTerritorySubHeadline = idsForTerritorySubHeadline.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
-      const medianLatestTerritorySubHeadline = calculateMedian(latestProbabilitiesTerritorySubHeadline);
-      const medianLastDayTerritorySubHeadline = calculateMedian(lastDayProbabilitiesTerritorySubHeadline);
-      const percentagePointDifferenceTerritorySubHeadline = Math.round((medianLatestTerritorySubHeadline - medianLastDayTerritorySubHeadline) * 100);
-      const medianLatestPercentTerritorySubHeadline = Math.round(medianLatestTerritorySubHeadline * 100);
-      subHeadlineText = `Ukraine ~${medianLatestPercentTerritorySubHeadline}% likely to withdraw from Russia by Feb, 2025`;
-      if (Math.abs(percentagePointDifferenceTerritorySubHeadline) >= 1) {
-        const directionSub = (percentagePointDifferenceTerritorySubHeadline > 0) ? 'up' : 'down';
-        subHeadlineText += `, ${directionSub} ${percentagePointDifferenceTerritorySubHeadline >= 0 ? '+' : ''}${percentagePointDifferenceTerritorySubHeadline} points this month`;
-      }      
+      case 'Territory2.json':
+        const idsForTerritoryHeadline2 = ['goodjudgmentopen-3658'];
+        const latestProbabilitiesTerritoryHeadline2 = idsForTerritoryHeadline2.map(id => dataMap[id]?.latestProbability || 0).filter(x => !isNaN(x));
+        const lastDayProbabilitiesTerritoryHeadline2 = idsForTerritoryHeadline2.map(id => dataMap[id]?.lastDayProbability || 0).filter(x => !isNaN(x));
+        const medianLatestTerritoryHeadline2 = calculateMedian(latestProbabilitiesTerritoryHeadline2);
+        const medianLastDayTerritoryHeadline2 = calculateMedian(lastDayProbabilitiesTerritoryHeadline2);
+        const percentagePointDifferenceTerritoryHeadline2 = Math.round((medianLatestTerritoryHeadline2 - medianLastDayTerritoryHeadline2) * 100);
+        const medianLatestPercentTerritoryHeadline2 = Math.round(medianLatestTerritoryHeadline2 * 100);
+        headlineText = `Ukraine ~${medianLatestPercentTerritoryHeadline2}% likely to withdraw from Russia by Feb, 2025`;
+        if (Math.abs(percentagePointDifferenceTerritoryHeadline2) >= 1) {
+          const direction = (percentagePointDifferenceTerritoryHeadline2 > 0) ? 'up' : 'down';
+          headlineText += `, ${direction} ${percentagePointDifferenceTerritoryHeadline2 >= 0 ? '+' : ''}${percentagePointDifferenceTerritoryHeadline2} points this month`;
+        }
     break;
 
       // Wagner
