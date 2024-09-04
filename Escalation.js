@@ -16,12 +16,32 @@ const markets = [
 { name: "RUS annxes part of Baltics by 2035?", id: "metaculus-8786" },
 ];
 
+//function getPoint(id, historyItem) {
+//  for (const option of historyItem.options) {
+//    if (option.name === 'Yes') {
+//      return { x: historyItem.fetched * 1000, y: option.probability }
+//    }
+//  }
+//}
+
+//fetchAll(markets, getPoint).then((data) => writeJSONOutput("Escalation.json", data));
+
 function getPoint(id, historyItem) {
   for (const option of historyItem.options) {
     if (option.name === 'Yes') {
-      return { x: historyItem.fetched * 1000, y: option.probability }
+      return { x: historyItem.fetched * 1000, y: option.probability }; // Only 'Yes'
     }
   }
+  // Log if 'Yes' option is not found
+  console.log(`'Yes' option not found for ${id} at ${historyItem.fetched}`);
+  return null; // Explicitly return null if 'Yes' is not found
 }
 
-fetchAll(markets, getPoint).then((data) => writeJSONOutput("Escalation.json", data));
+fetchAll(markets, getPoint).then((data) => {
+  // Filter out nulls before saving
+  const cleanedData = data.map(market => ({
+    ...market,
+    points: market.points.filter(point => point !== null)
+  }));
+  writeJSONOutput("Escalation.json", cleanedData);
+});
