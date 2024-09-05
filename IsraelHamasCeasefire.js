@@ -18,6 +18,18 @@ function getPoint(id, historyItem) {
       return { x: historyItem.fetched * 1000, y: option.probability }
     }
   }
+      // Log if 'Yes' option is not found
+      console.log(`'Yes' option not found for ${id} at ${historyItem.fetched}`);
+      return null; // Explicitly return null if 'Yes' is not found
 }
 
-fetchAll(markets, getPoint).then((data) => writeJSONOutput("IsraelHamasCeasefire.json", data));
+//fetchAll(markets, getPoint).then((data) => writeJSONOutput("IsraelHamasCeasefire.json", data));
+
+fetchAll(markets, getPoint).then((data) => {
+  // Filter out nulls before saving
+  const cleanedData = data.map(market => ({
+    ...market,
+    points: market.points.filter(point => point !== null)
+  }));
+  writeJSONOutput("IsraelHamasCeasefire.json", cleanedData);
+});
