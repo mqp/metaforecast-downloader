@@ -197,7 +197,7 @@
   },
   {
     "id": "metaculus-21320",
-    "name": "Israel-Hezbollah conflict ≥1k deaths by 2025?",
+    "name": "Israel-Hezbollah conflict ≥1k deaths in 2024?",
     "site": "Metaculus",
     "points": [
       {
@@ -2302,6 +2302,10 @@
       },
       {
         "x": 1725419559949,
+        "y": 0.4037538952163222
+      },
+      {
+        "x": 1725505974411,
         "y": 0.4037538952163222
       }
     ],
