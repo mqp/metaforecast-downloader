@@ -103,6 +103,10 @@
       {
         "x": 1726383270073,
         "y": 0.2
+      },
+      {
+        "x": 1726469904898,
+        "y": 0.2
       }
     ],
     "url": "https://www.metaculus.com/questions/27191/ukraine-withdraws-from-kursk-before-dec-2024/"
@@ -1110,6 +1114,10 @@
       },
       {
         "x": 1726383270072,
+        "y": 0.01
+      },
+      {
+        "x": 1726469904897,
         "y": 0.01
       }
     ],
@@ -2527,6 +2535,10 @@
       {
         "x": 1726383270071,
         "y": 0.04
+      },
+      {
+        "x": 1726469904896,
+        "y": 0.03
       }
     ],
     "url": "https://www.metaculus.com/questions/18865/ukraine-takes-control-of-donetsk-and-luhansk/"
