@@ -111,6 +111,10 @@
       {
         "x": 1726556116108,
         "y": 0.2
+      },
+      {
+        "x": 1726642515755,
+        "y": 0.2
       }
     ],
     "url": "https://www.metaculus.com/questions/27191/ukraine-withdraws-from-kursk-before-dec-2024/"
@@ -219,6 +223,14 @@
       {
         "x": 1726542717697,
         "y": 0.4216
+      },
+      {
+        "x": 1726629107398,
+        "y": 0.4216
+      },
+      {
+        "x": 1726715502334,
+        "y": 0.38880000000000003
       }
     ],
     "url": "https://www.gjopen.com/questions/3658-when-will-ukrainian-regular-ground-armed-forces-cease-to-be-in-the-internationally-recognized-territory-of-russia"
@@ -1130,6 +1142,10 @@
       },
       {
         "x": 1726556116107,
+        "y": 0.01
+      },
+      {
+        "x": 1726642515753,
         "y": 0.01
       }
     ],
@@ -2554,6 +2570,10 @@
       },
       {
         "x": 1726556116107,
+        "y": 0.03
+      },
+      {
+        "x": 1726642515753,
         "y": 0.03
       }
     ],

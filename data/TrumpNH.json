@@ -2195,6 +2195,10 @@
       {
         "x": 1726556358827,
         "y": 0.7323901264298615
+      },
+      {
+        "x": 1726642739862,
+        "y": 0.7323901264298615
       }
     ],
     "url": "https://smarkets.com/event/43155469/politics/us/2024/11/05/00-00/congress/2024/11/05/00-00/2024-senate-control"
@@ -5227,6 +5231,10 @@
       {
         "x": 1726556116102,
         "y": 0.709
+      },
+      {
+        "x": 1726642515750,
+        "y": 0.709
       }
     ],
     "url": "https://www.metaculus.com/questions/7850/gop-control-of-us-senate-in-2025/"
@@ -5335,6 +5343,14 @@
       {
         "x": 1726542717698,
         "y": 0.5463
+      },
+      {
+        "x": 1726629107399,
+        "y": 0.5463
+      },
+      {
+        "x": 1726715502335,
+        "y": 0.5472
       }
     ],
     "url": "https://www.gjopen.com/questions/3220-which-party-will-win-control-of-the-us-senate-in-the-2024-elections"
@@ -8367,6 +8383,10 @@
       {
         "x": 1726556116102,
         "y": 0.45
+      },
+      {
+        "x": 1726642515750,
+        "y": 0.448
       }
     ],
     "url": "https://www.metaculus.com/questions/7849/2024-us-house-midterm-election/"
@@ -8719,6 +8739,14 @@
       {
         "x": 1726542717698,
         "y": 0.4324
+      },
+      {
+        "x": 1726629107399,
+        "y": 0.4324
+      },
+      {
+        "x": 1726715502335,
+        "y": 0.4332
       }
     ],
     "url": "https://www.gjopen.com/questions/3219-which-party-will-win-control-of-the-us-house-of-representatives-in-the-2024-elections"

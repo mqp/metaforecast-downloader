@@ -243,6 +243,10 @@
       {
         "x": 1726556116108,
         "y": 0.03
+      },
+      {
+        "x": 1726642515754,
+        "y": 0.07
       }
     ],
     "url": "https://www.metaculus.com/questions/25846/israel-to-invade-lebanon/"
@@ -1119,6 +1123,10 @@
       {
         "x": 1726556116108,
         "y": 0.87
+      },
+      {
+        "x": 1726642515754,
+        "y": 0.9
       }
     ],
     "url": "https://www.metaculus.com/questions/21320/israel-hezbollah-1000-deaths-before-2025/"
@@ -2459,6 +2467,14 @@
       {
         "x": 1726542783014,
         "y": 0.6254670768083267
+      },
+      {
+        "x": 1726629169410,
+        "y": 0.5949757463979995
+      },
+      {
+        "x": 1726715576112,
+        "y": 0.6818293326148741
       }
     ],
     "url": "https://manifold.markets/NADZOR/will-hezbollah-directly-engage-in-c"
