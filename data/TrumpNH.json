@@ -2355,9 +2355,13 @@
       {
         "x": 1730000819901,
         "y": 0.8183304568989009
+      },
+      {
+        "x": 1730087213577,
+        "y": 0.8183304568989009
       }
     ],
-    "url": "https://smarkets.com/event/43155469/politics/us/2024/11/05/00-00/congress/2024/11/05/00-00/2024-senate-control"
+    "url": "https://smarkets.com/event/43155469/politics/us/2024/11/05/00-00/congress/2024/11/05/00-00/senate-control"
   },
   {
     "id": "metaculus-7850",
@@ -5735,6 +5739,10 @@
       {
         "x": 1729998761496,
         "y": 0.6299
+      },
+      {
+        "x": 1730085123600,
+        "y": 0.6371
       }
     ],
     "url": "https://www.gjopen.com/questions/3220-which-party-will-win-control-of-the-us-senate-in-the-2024-elections"
@@ -9359,6 +9367,10 @@
       {
         "x": 1729998761496,
         "y": 0.4649
+      },
+      {
+        "x": 1730085123600,
+        "y": 0.4671
       }
     ],
     "url": "https://www.gjopen.com/questions/3219-which-party-will-win-control-of-the-us-house-of-representatives-in-the-2024-elections"
