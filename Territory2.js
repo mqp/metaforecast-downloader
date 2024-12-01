@@ -1,7 +1,7 @@
 import { fetchAll, writeJSONOutput } from './helpers.js';
 
 const markets = [
-  { name: "UKR exits Kursk by Dec 2024?", id: "metaculus-27191" },
+//  { name: "UKR exits Kursk by Dec 2024?", id: "metaculus-27191" },
   { name: "UKR exits RUS by Feb 2025?", id: "goodjudgmentopen-3658" },
   { name: "UKR controls Bakhmut in 2024?", id: "metaculus-20761" },
   { name: "UKR controls DNR/LNR by 2030?", id: "metaculus-18865" },

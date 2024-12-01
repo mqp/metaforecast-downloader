@@ -6,7 +6,7 @@ const markets = [
   //{ name: "Army head Deif captured/killed?", id: "manifold-kVw4c6CXZlCUAhY1laVR" },
   { name: "Netanyahu stays Israel leader in 2024?", id: "metaculus-20753" },
   { name: "Khamenei stays Iran leader in 2024?", id: "metaculus-20783" },
-  { name: "Hamas leader Sinwar captured/killed by Oct 2024?", id: "goodjudgmentopen-3286" },
+  //{ name: "Hamas leader Sinwar captured/killed by Oct 2024?", id: "goodjudgmentopen-3286" },
   { name: "ICC charges Netanyahu by 2026?", id: "metaculus-19824" },
 ];
 

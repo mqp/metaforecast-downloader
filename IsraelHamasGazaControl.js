@@ -9,7 +9,7 @@ const markets = [
 // { name: "UN troops enter Gaza by Apr?", id: "metaculus-19849" },
 // { name: "Hamas loses power in Gaza by Apr?", id: "manifold-JNk4oJ5uVu6nsnsXJeOH" },
 
-{ name: "IDF exits Gaza by Oct 2024?", id: "goodjudgmentopen-3069" },
+//{ name: "IDF exits Gaza by Oct 2024?", id: "goodjudgmentopen-3069" },
 { name: "Israel occupies Gaza in 2024?", id: "manifold-r8ll07OIvKvXOryaTKT1" },
 { name: "Palestinians: ≥500k displaced from Gaza before 2026?", id: "metaculus-19949" },
 ];

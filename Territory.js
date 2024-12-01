@@ -8,8 +8,8 @@ const markets = [
   // { name: "Ukr retakes DNR/LNR?", id: "metaculus-10738" },
   // { name: "Rus gains new territory by Oct?", id: "insight-146589" },
 
-  { name: "RUS gains Chasiv Yar by Oct 2024?", id: "metaculus-25749" },
-  { name: "RUS gains Kharkiv by Nov 2024?", id: "goodjudgmentopen-3477" },
+  //{ name: "RUS gains Chasiv Yar by Oct 2024?", id: "metaculus-25749" },
+  //{ name: "RUS gains Kharkiv by Nov 2024?", id: "goodjudgmentopen-3477" },
   { name: "RUS gains new territory by 2026?", id: "metaculus-19724" },
 
 //  { name: "UKR exits Kursk by Dec 2024?", id: "metaculus-27191" },

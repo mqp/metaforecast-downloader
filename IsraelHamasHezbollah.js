@@ -5,7 +5,7 @@ const markets = [
 //  { name: "Israel-Hezbollah war?", id: "manifold-xpCT9MEzcBgYXIB8QO3B" },
 //  { name: "Israel-Hezbollah conflict ≥400 deaths?", id: "metaculus-19375" },
 //  { name: "Israel invades Lebanon?", id: "goodjudgmentopen-3062" },
-{ name: "Israel invades Lebanon by Oct 2024?", id: "metaculus-25846" },
+//{ name: "Israel invades Lebanon by Oct 2024?", id: "metaculus-25846" },
 { name: "Israel-Hezbollah conflict ≥1k deaths in 2024?", id: "metaculus-21320" },
 { name: "Israel-Hezbollah combat by 2027?", id: "manifold-l9dhLkCSjs5m0baSCsgf" },
 // { name: "IDF invades Lebanon with AFVs by Mar 15?", id: "goodjudgmentopen-3163" },

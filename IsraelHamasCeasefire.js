@@ -6,8 +6,8 @@ const markets = [
 //  { name: "Hamas surrender?", id: "polymarket-0x25b8502f" },
 //  { name: "Hamas surrender?", id: "manifold-wwqLiPRHoieeQT6Ncr0R" },
 //  { name: "Ceasefire by Feb?", id: "polymarket-0x6e80e981" },
-  { name: "Ceasefire by Oct 2024?", id: "goodjudgmentopen-3572" },
-  { name: "Ceasefire by Nov 2024?", id: "metaculus-26084" },
+  //{ name: "Ceasefire by Oct 2024?", id: "goodjudgmentopen-3572" },
+  //{ name: "Ceasefire by Nov 2024?", id: "metaculus-26084" },
   { name: "Ceasefire in 2024?", id: "manifold-5PBiCM7mofSHR55eoXkP" },
   { name: "Hamas surrender in 2024?", id: "manifold-T58z1Wq5KDOxYUyHX6oE" },
 ];

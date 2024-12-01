@@ -7,8 +7,8 @@ const markets = [
 //Broken on Poly but good for 2024  { name: "UKR starts nuke program by 2025?", id: "metaculus-17791" },
 // { name: "Iran nukes 'likely' by Jul 2024?", id: "goodjudgmentopen-2552" },
 
-{ name: "Israel uses nuke in combat by Oct 2024?", id: "metaculus-19554" },
-{ name: "Russia uses nuke vs Ukraine by Oct 2024?", id: "metaculus-27538" },
+//{ name: "Israel uses nuke in combat by Oct 2024?", id: "metaculus-19554" },
+//{ name: "Russia uses nuke vs Ukraine by Oct 2024?", id: "metaculus-27538" },
 { name: "Nuke kills ≥10 people in 2024?", id: "metaculus-20768" },
 { name: "Ukraine plant radiation incident in 2024?", id: "metaculus-20790" },
 { name: "Ukraine starts nuke program by 2026?", id: "metaculus-17791" },
